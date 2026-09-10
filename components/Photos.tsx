@@ -11,7 +11,7 @@ export default function Photos() {
         <h2 className="mb-9 font-serif text-[clamp(1.6rem,3vw,2rem)] text-balance">
           Inside the platforms I buy on
         </h2>
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-[repeat(auto-fit,minmax(240px,320px))]">
           {photos.map((photo) => (
             <figure key={photo.src} className="photo-card">
               <div className="relative aspect-[3/4] overflow-hidden rounded-xl border border-line bg-surface shadow-card">

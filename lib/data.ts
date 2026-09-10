@@ -89,11 +89,6 @@ export const photos: Photo[] = [
     alt: "Sunichaya beside a giant Brown character at LINE Cafe inside the LINE Thailand office",
     caption: "LINE Cafe, LINE Thailand",
   },
-  {
-    src: "/photos/line-office.jpg",
-    alt: "Sunichaya holding a Sally plush next to a giant Sally character at the LINE Thailand office",
-    caption: "LINE Thailand office",
-  },
 ];
 
 export const skillAreas: SkillArea[] = [
