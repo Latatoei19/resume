@@ -41,7 +41,6 @@ export type Certification = {
   name: string;
   issuer: string;
   year: string;
-  url: string | null;
   category: string;
   image: string;
 };
@@ -63,6 +62,6 @@ export type Project = {
   objective: string;
   role: string | null;
   metrics: Metric[];
-  certificateUrl: string | null;
   image: string | null;
+  imageAlt: string | null;
 };

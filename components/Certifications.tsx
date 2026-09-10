@@ -37,21 +37,9 @@ export default function Certifications() {
                         <h4 className="font-semibold leading-snug text-balance">{cert.name}</h4>
                         <p className="mt-2 text-[0.85rem] text-ink-soft">{cert.issuer}</p>
                       </div>
-                      <div className="mt-auto flex items-center justify-between gap-3">
-                        <span className="font-mono text-[0.8rem] tabular-nums text-ink-soft">
-                          {cert.year}
-                        </span>
-                        {cert.url && (
-                          <a
-                            href={cert.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-[0.82rem] font-semibold text-accent no-underline hover:underline"
-                          >
-                            View ↗
-                          </a>
-                        )}
-                      </div>
+                      <span className="mt-auto font-mono text-[0.8rem] tabular-nums text-ink-soft">
+                        {cert.year}
+                      </span>
                     </article>
                   ))}
               </div>
