@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { IBM_Plex_Mono, Instrument_Serif, Public_Sans } from "next/font/google";
+import { IBM_Plex_Mono, Outfit, Public_Sans } from "next/font/google";
 import { profile } from "@/lib/data";
 import "./globals.css";
 
-const instrumentSerif = Instrument_Serif({
-  variable: "--font-instrument-serif",
+const outfit = Outfit({
+  variable: "--font-outfit",
   subsets: ["latin"],
-  weight: "400",
+  weight: ["600", "700"],
 });
 
 const publicSans = Public_Sans({
@@ -42,7 +42,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${instrumentSerif.variable} ${publicSans.variable} ${plexMono.variable} h-full antialiased`}
+      className={`${outfit.variable} ${publicSans.variable} ${plexMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-sans">{children}</body>
     </html>

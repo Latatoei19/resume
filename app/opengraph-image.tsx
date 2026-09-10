@@ -11,8 +11,8 @@ const fontFile = (pkg: string, file: string) =>
   readFile(join(process.cwd(), "node_modules", "@fontsource", pkg, "files", file));
 
 export default async function Image() {
-  const [serif, sans, sansBold, mono, portrait] = await Promise.all([
-    fontFile("instrument-serif", "instrument-serif-latin-400-normal.woff"),
+  const [display, sans, sansBold, mono, portrait] = await Promise.all([
+    fontFile("outfit", "outfit-latin-700-normal.woff"),
     fontFile("public-sans", "public-sans-latin-400-normal.woff"),
     fontFile("public-sans", "public-sans-latin-700-normal.woff"),
     fontFile("ibm-plex-mono", "ibm-plex-mono-latin-500-normal.woff"),
@@ -55,8 +55,10 @@ export default async function Image() {
           </div>
           <div
             style={{
-              fontFamily: "Instrument Serif",
-              fontSize: 86,
+              fontFamily: "Outfit",
+              fontSize: 78,
+              fontWeight: 700,
+              letterSpacing: -2,
               lineHeight: 1.05,
               marginTop: 24,
             }}
@@ -108,7 +110,7 @@ export default async function Image() {
     {
       ...size,
       fonts: [
-        { name: "Instrument Serif", data: serif, weight: 400, style: "normal" },
+        { name: "Outfit", data: display, weight: 700, style: "normal" },
         { name: "Public Sans", data: sans, weight: 400, style: "normal" },
         { name: "Public Sans", data: sansBold, weight: 700, style: "normal" },
         { name: "IBM Plex Mono", data: mono, weight: 500, style: "normal" },

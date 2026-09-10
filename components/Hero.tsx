@@ -11,7 +11,7 @@ export default function Hero() {
             <strong className="font-semibold text-accent">● {profile.status}</strong> —{" "}
             {profile.location}
           </p>
-          <h1 className="font-serif text-[clamp(2.6rem,6vw,4.4rem)] leading-[1.02] text-balance">
+          <h1 className="font-display text-[clamp(2.5rem,5.6vw,4rem)] font-bold leading-[1.03] tracking-[-0.02em] text-balance">
             {profile.name}
           </h1>
           <p className="mt-2.5 text-[clamp(1.05rem,2vw,1.3rem)] font-semibold text-accent">
