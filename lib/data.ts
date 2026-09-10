@@ -294,11 +294,7 @@ export const awards: Award[] = [
     objective:
       "Develop and present a business case solution for LINE Shopping, run as part of LINE Thailand's LINE Rookie program.",
     role: "Co-led a team through problem framing, research and solution design across the competition rounds.",
-    metrics: [
-      { value: "Winner", label: "Placement" },
-      { value: "Co-Lead", label: "Role" },
-      { value: "LINE Rookie", label: "Program" },
-    ],
+    metrics: [{ value: "Winner", label: "Placement" }],
     image: "/projects/line-award.jpg",
     imageWidth: 1100,
     imageHeight: 733,
@@ -311,11 +307,7 @@ export const awards: Award[] = [
     objective:
       "Compete in Thailand's national marketing case competition against 257 university teams.",
     role: "Co-led the team's case analysis and strategic recommendation through multiple rounds of judging.",
-    metrics: [
-      { value: "Top 7", label: "Placement" },
-      { value: "257", label: "Teams" },
-      { value: "H.M.", label: "Honorable Mention" },
-    ],
+    metrics: [{ value: "Top 7", label: "Placement" }],
     image: "/projects/jmat-award.jpg",
     imageWidth: 1000,
     imageHeight: 793,
@@ -327,11 +319,7 @@ export const awards: Award[] = [
     objective:
       "Compete in TRUE's simulated company program, run on business strategy and execution across a series of rounds.",
     role: null,
-    metrics: [
-      { value: "Top 6", label: "Placement" },
-      { value: "Finalist", label: "Result" },
-      { value: "H.M.", label: "Honorable Mention" },
-    ],
+    metrics: [{ value: "Top 6", label: "Placement" }],
     image: "/projects/true-award.jpg",
     imageWidth: 1000,
     imageHeight: 707,
