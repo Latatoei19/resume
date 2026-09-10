@@ -1,5 +1,27 @@
 import Image from "next/image";
+import { siLine, siTiktok } from "simple-icons";
 import { experiences } from "@/lib/data";
+
+const brandIcons: Record<string, { path: string; hex: string }> = {
+  tiktok: siTiktok,
+  line: siLine,
+};
+
+function CompanyLogo({ logo, company }: { logo: string; company: string }) {
+  const icon = brandIcons[logo];
+
+  return (
+    <span className="flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden rounded-md border border-line bg-white">
+      {icon ? (
+        <svg viewBox="0 0 24 24" aria-hidden="true" className="h-[18px] w-[18px]">
+          <path d={icon.path} fill={`#${icon.hex}`} />
+        </svg>
+      ) : (
+        <Image src={logo} alt={`${company} logo`} width={36} height={36} className="h-5 w-5" />
+      )}
+    </span>
+  );
+}
 
 export default function Experience() {
   return (
@@ -15,12 +37,15 @@ export default function Experience() {
                 aria-hidden
                 className="absolute -left-[32px] top-1.5 h-[11px] w-[11px] rounded-full bg-accent ring-4 ring-paper"
               />
-              <div className="flex flex-wrap items-baseline gap-x-4 gap-y-2.5">
-                <span className="text-[1.15rem] font-bold">{job.role}</span>
-                <span className="font-semibold text-accent">· {job.company}</span>
-                <span className="font-mono text-[0.78rem] text-ink-soft sm:ml-auto">
-                  {job.period}
-                </span>
+              <div className="flex items-start gap-3.5">
+                <CompanyLogo logo={job.logo} company={job.company} />
+                <div className="flex flex-wrap items-baseline gap-x-4 gap-y-2 pt-0.5">
+                  <span className="text-[1.15rem] font-bold">{job.role}</span>
+                  <span className="font-semibold text-accent">· {job.company}</span>
+                  <span className="font-mono text-[0.78rem] text-ink-soft sm:ml-auto">
+                    {job.period}
+                  </span>
+                </div>
               </div>
               <ul className="mt-3.5 list-disc pl-[18px] text-[0.94rem] leading-[1.65] text-ink-soft">
                 {job.responsibilities.map((item) => (

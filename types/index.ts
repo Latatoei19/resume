@@ -32,6 +32,8 @@ export type Experience = {
   period: string;
   responsibilities: string[];
   badge: string;
+  // A simple-icons slug, or a path under /logos for brands the library lacks.
+  logo: string;
   photos: RolePhoto[];
 };
 

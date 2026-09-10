@@ -50,6 +50,7 @@ export const experiences: Experience[] = [
       "Track platform and trend updates across Facebook, Instagram, TikTok, YouTube and Google to keep buying strategy current",
     ],
     badge: "8 outlets · 4 flagship events",
+    logo: "/logos/the-standard.png",
     photos: [],
   },
   {
@@ -63,7 +64,20 @@ export const experiences: Experience[] = [
       "Handle campaign trafficking and deployment across TikTok, YouTube, Pangle, Programmatic and Meta",
     ],
     badge: "6 paid channels · multi-channel ops",
+    logo: "tiktok",
     photos: [
+      {
+        src: "/photos/tiktok-awards-stage.jpg",
+        alt: "Sunichaya on stage at the TikTok Shop Awards 2026 event in Bangkok",
+        width: 975,
+        height: 1300,
+      },
+      {
+        src: "/photos/tiktok-new-year-2026.jpg",
+        alt: "The TikTok Shop Thailand team at the Happy New Year 2026 celebration",
+        width: 1101,
+        height: 1300,
+      },
       {
         src: "/photos/tiktok-awards-2026.jpg",
         alt: "Sunichaya and her team on stage at the TikTok Shop Awards 2026 event",
@@ -89,6 +103,7 @@ export const experiences: Experience[] = [
       "Reviewed influencer profiles and content with agencies and KOLs to maintain brand consistency",
     ],
     badge: "Reported to C-level",
+    logo: "line",
     photos: [
       {
         src: "/photos/line-cafe.jpg",
