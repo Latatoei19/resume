@@ -39,6 +39,12 @@ export type Certification = {
   url: string | null;
 };
 
+export type Photo = {
+  src: string;
+  alt: string;
+  caption: string;
+};
+
 export type Metric = {
   value: string;
   label: string;
