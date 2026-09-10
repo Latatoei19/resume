@@ -15,11 +15,11 @@ export default function Contact() {
             technology roles in Bangkok or remote.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
-            <Pill href={`mailto:${profile.email}`} solid>
+            <Pill href={`mailto:${profile.email}`} solid track="contact-email">
               {profile.email}
             </Pill>
             {profile.linkedin && (
-              <Pill href={profile.linkedin} external>
+              <Pill href={profile.linkedin} external track="contact-linkedin">
                 LinkedIn ↗
               </Pill>
             )}

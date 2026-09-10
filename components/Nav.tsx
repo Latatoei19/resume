@@ -19,6 +19,8 @@ export default function Nav() {
             <li key={link.href}>
               <a
                 href={link.href}
+                data-track="nav"
+                data-track-target={link.label}
                 className="text-[0.85rem] text-ink-soft no-underline transition hover:text-accent"
               >
                 {link.label}
@@ -28,6 +30,8 @@ export default function Nav() {
         </ul>
         <a
           href="#contact"
+          data-track="nav"
+          data-track-target="Contact"
           className="text-[0.85rem] font-semibold text-accent no-underline sm:hidden"
         >
           Contact

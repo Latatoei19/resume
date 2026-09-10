@@ -1,3 +1,4 @@
+import { GoogleTagManager } from "@next/third-parties/google";
 import type { Metadata } from "next";
 import { IBM_Plex_Mono, Outfit, Public_Sans } from "next/font/google";
 import { profile } from "@/lib/data";
@@ -45,6 +46,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${outfit.variable} ${publicSans.variable} ${plexMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-sans">{children}</body>
+      <GoogleTagManager gtmId="GTM-5BFBBQCP" />
     </html>
   );
 }

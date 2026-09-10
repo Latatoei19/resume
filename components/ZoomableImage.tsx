@@ -36,6 +36,8 @@ export default function ZoomableImage({
         type="button"
         onClick={() => setOpen(true)}
         aria-label={`Enlarge photo: ${alt}`}
+        data-track="image-zoom"
+        data-track-image={src}
         className="block cursor-zoom-in focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
       >
         <Image

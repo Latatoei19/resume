@@ -21,11 +21,11 @@ export default function Hero() {
             {profile.intro}
           </p>
           <div className="mt-[30px] flex flex-wrap gap-3">
-            <Pill href={`mailto:${profile.email}`} solid>
+            <Pill href={`mailto:${profile.email}`} solid track="hero-email">
               Email me
             </Pill>
             {profile.linkedin && (
-              <Pill href={profile.linkedin} external>
+              <Pill href={profile.linkedin} external track="hero-linkedin">
                 LinkedIn ↗
               </Pill>
             )}
