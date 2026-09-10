@@ -54,7 +54,7 @@ export const experiences: Experience[] = [
   {
     role: "Marketing Communication Associate",
     company: "TikTok Shop Thailand (ByteDance)",
-    period: "Sep 2025 — Present",
+    period: "Sep 2025 — Mar 2026",
     responsibilities: [
       "Manage high-volume campaign operations and asset deployment — hundreds of creatives across multiple campaigns — coordinating internal teams, agencies and vendors for on-time, multi-channel launches",
       "Built automated Excel dashboards tracking Impressions, Clicks, CPM, CPC, CPPV, CPUV, ROAS and GMV, improving reporting efficiency for stakeholders",
@@ -123,48 +123,56 @@ export const certifications: Certification[] = [
     issuer: "Google x Coursera",
     year: "2023",
     url: "https://coursera.org/verify/ZYBWFSBPTTC6",
+    category: "Digital Marketing",
   },
   {
     name: "Attract and Engage Customers with Digital Marketing",
     issuer: "Google x Coursera",
     year: "2023",
     url: "https://coursera.org/verify/TYZACZHB6SHK",
+    category: "Digital Marketing",
   },
   {
     name: "From Likes to Leads: Interact with Customers Online",
     issuer: "Google x Coursera",
     year: "2023",
     url: "https://coursera.org/verify/Y5DV2JLTT9B8",
+    category: "Digital Marketing",
   },
   {
     name: "Effective Data Storytelling",
     issuer: "Skooldio",
     year: "2025",
     url: "https://drive.google.com/file/d/1WUaCj0PiA_h5qpgKX1cZtNiFNNDyWaaO/view",
+    category: "Marketing Strategy & Data",
   },
   {
     name: "Marketing Trainee 37th",
     issuer: "Marketing Association of Thailand",
     year: "2024",
     url: "https://drive.google.com/file/d/1xL2_6mjgJoLDqvc65HDyjTOJR-EW91uj/view",
+    category: "Marketing Strategy & Data",
   },
   {
     name: "NFT: A New Approach to Marketing Strategy",
     issuer: "Bitkub Academy × Chulalongkorn University",
     year: "2023",
     url: "https://drive.google.com/file/d/1FolqVhcNwvGWjHAqWPuz5xvB19sZwHoj/view",
+    category: "Marketing Strategy & Data",
   },
   {
     name: "Demographic Disruption and Business",
     issuer: "CHULA MOOC × Sasin",
     year: "2022",
     url: "https://drive.google.com/file/d/15Ir-L6k1SEeUmtAeyeHTn-lDUilCwbi5/view",
+    category: "Business Foundations",
   },
   {
     name: "Critical Thinking for Business",
     issuer: "CHULA MOOC",
     year: "2022",
     url: "https://drive.google.com/file/d/1yq2Yi-6NqNPr4mAsAEMD2tfToPWsezdQ/view",
+    category: "Business Foundations",
   },
 ];
 

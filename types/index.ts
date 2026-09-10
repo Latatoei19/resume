@@ -37,6 +37,7 @@ export type Certification = {
   issuer: string;
   year: string;
   url: string | null;
+  category: string;
 };
 
 export type Photo = {

@@ -1,31 +1,50 @@
 import { certifications } from "@/lib/data";
 
 export default function Certifications() {
+  const categories = [...new Set(certifications.map((cert) => cert.category))];
+
   return (
     <section id="certifications" className="border-b border-line py-[76px]">
       <div className="mx-auto w-full max-w-[920px] px-7">
         <p className="mb-3.5 font-mono text-[0.72rem] uppercase tracking-[0.12em] text-accent">
           Certifications
         </p>
-        <div className="mt-[30px] border-t border-line">
-          {certifications.map((cert) => (
-            <div
-              key={cert.name}
-              className="grid grid-cols-1 items-center gap-x-4 gap-y-1 border-b border-line py-4 text-[0.92rem] sm:grid-cols-[2.2fr_1.3fr_0.7fr_0.5fr]"
-            >
-              <span className="font-semibold">{cert.name}</span>
-              <span className="text-ink-soft">{cert.issuer}</span>
-              <span className="font-mono tabular-nums text-ink-soft">{cert.year}</span>
-              {cert.url && (
-                <a
-                  href={cert.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[0.85rem] text-accent no-underline hover:underline sm:text-right"
-                >
-                  View ↗
-                </a>
-              )}
+        <div className="mt-8 flex flex-col gap-10">
+          {categories.map((category) => (
+            <div key={category}>
+              <h3 className="mb-4 font-mono text-[0.74rem] uppercase tracking-[0.1em]">
+                {category}
+              </h3>
+              <div className="rail -mx-7 flex snap-x snap-mandatory gap-4 overflow-x-auto px-7 pb-3">
+                {certifications
+                  .filter((cert) => cert.category === category)
+                  .map((cert) => (
+                    <article
+                      key={cert.name}
+                      className="flex w-[300px] shrink-0 snap-start flex-col justify-between gap-5 rounded-xl border border-line bg-surface p-5 shadow-card"
+                    >
+                      <div>
+                        <h4 className="font-semibold leading-snug text-balance">{cert.name}</h4>
+                        <p className="mt-2 text-[0.85rem] text-ink-soft">{cert.issuer}</p>
+                      </div>
+                      <div className="flex items-center justify-between gap-3">
+                        <span className="font-mono text-[0.8rem] tabular-nums text-ink-soft">
+                          {cert.year}
+                        </span>
+                        {cert.url && (
+                          <a
+                            href={cert.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-[0.82rem] font-semibold text-accent no-underline hover:underline"
+                          >
+                            View ↗
+                          </a>
+                        )}
+                      </div>
+                    </article>
+                  ))}
+              </div>
             </div>
           ))}
         </div>

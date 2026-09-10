@@ -51,6 +51,12 @@ body {
   color: var(--ink);
 }
 
+.rail {
+  scrollbar-width: thin;
+  scrollbar-color: var(--line) transparent;
+  overscroll-behavior-x: contain;
+}
+
 /* Scroll-driven reveal + parallax. Browsers without scroll timelines just show
    the photos at rest, so nothing depends on the animation running. */
 @supports (animation-timeline: view()) {
