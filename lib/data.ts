@@ -8,13 +8,13 @@ import type {
 
 export const profile: Profile = {
   name: "Sunichaya Petcharoen",
-  headline: "Marketing Communications & Performance Marketing",
+  headline: "Performance Marketing & Ads Optimization",
   status: "Open to new opportunities",
   location: "Bangkok, TH",
   intro:
-    "I run multi-channel campaign operations at TikTok Shop Thailand and build the tracking and dashboards behind them — from UTM-tagged media plans to reporting that stakeholders actually use.",
+    "I plan and optimize paid media across Meta, TikTok, YouTube and Google Ads for THE STANDARD's editorial outlets and flagship events — from the media plan and KPI forecast through to the reporting that closes the loop.",
   summary:
-    "I'm a Marketing Communications Associate at TikTok Shop Thailand, running high-volume campaign operations across TikTok, Meta, YouTube, Pangle and Programmatic. Before that, I built my analytics and paid media foundations as a Performance Marketing Intern at LINE, where I set up tracking and reported straight to C-level stakeholders.",
+    "I'm an Ads Optimizer at THE STANDARD, owning media planning and paid buying across every outlet in the group and its flagship events. Before that I ran high-volume campaign operations at TikTok Shop Thailand, and built my analytics and tracking foundations as a Performance Marketing Intern at LINE, reporting straight to C-level stakeholders.",
   strengths: [
     "Multi-channel campaign ops across TikTok, Meta, YouTube & LINE Ads",
     "Hands-on with GA4, GTM & Looker Studio for tracking and reporting",
@@ -30,12 +30,26 @@ export const profile: Profile = {
     note: "GPAX 3.59, Second Class Honors",
   },
   email: "Sunichaya.petch@gmail.com",
-  linkedin: null,
+  linkedin: "https://www.linkedin.com/in/sunichaya-petcharoen-99b5a5373/",
   github: null,
   languages: "Thai (Native), English (B1)",
 };
 
 export const experiences: Experience[] = [
+  {
+    role: "Ads Optimizer — Digital Platform Management",
+    company: "THE STANDARD",
+    period: "Apr 2026 — Present",
+    responsibilities: [
+      "Build online advertising strategy and media plans across Meta Ads, TikTok Ads, YouTube Ads and Google Ads — selecting platforms, objectives and flight durations, allocating budget, designing audiences, and forecasting KPI targets for both client and in-house projects",
+      "Run media buying end to end against plan: campaign setup, testing, optimization and KPI analysis, monitoring delivery to hit target results",
+      "Analyze performance data and build reports to present results and hand work over to stakeholders",
+      "Own paid media across all eight THE STANDARD outlets — THE STANDARD, THE Secret Sauce, THE STANDARD WEALTH, THE STANDARD SPORT, THE STANDARD LIFE, THE STANDARD POP, KND and THE STANDARD Podcast",
+      "Run advertising for flagship events including Alpha Skill (internal), The Secret Sauce Business Weekend Isan, The Secret Sauce Summit 2026 and Economic Forum 2026",
+      "Track platform and trend updates across Facebook, Instagram, TikTok, YouTube and Google to keep buying strategy current",
+    ],
+    badge: "8 outlets · 4 flagship events",
+  },
   {
     role: "Marketing Communication Associate",
     company: "TikTok Shop Thailand (ByteDance)",

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Mono, Instrument_Serif, Public_Sans } from "next/font/google";
+import { profile } from "@/lib/data";
 import "./globals.css";
 
 const instrumentSerif = Instrument_Serif({
@@ -20,9 +21,8 @@ const plexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Sunichaya Petcharoen — Marketing Communications & Performance Marketing",
-  description:
-    "Portfolio of Sunichaya Petcharoen — multi-channel campaign operations, paid media, and marketing analytics across TikTok, Meta, Google and LINE Ads.",
+  title: `${profile.name} — ${profile.headline}`,
+  description: profile.intro,
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
