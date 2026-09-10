@@ -1,0 +1,439 @@
+<title>Growth Ledger</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+  :root{
+    --paper:#F8F5FC;
+    --surface:#FFFFFF;
+    --ink:#2B2140;
+    --ink-soft:#71638C;
+    --line:#E4DCF2;
+    --accent:#8C6FC7;
+    --accent-soft:#EEE7F9;
+    --accent-warm:#C97FA0;
+    --accent-warm-soft:#F9E4EC;
+    --shadow:0 1px 2px rgba(43,33,64,0.05), 0 10px 28px rgba(43,33,64,0.08);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --paper:#17121F;
+      --surface:#211A2E;
+      --ink:#EFE9F8;
+      --ink-soft:#AC9CC7;
+      --line:#332A46;
+      --accent:#B79EF0;
+      --accent-soft:#2B2140;
+      --accent-warm:#E8A8C2;
+      --accent-warm-soft:#3B2432;
+      --shadow:0 1px 2px rgba(0,0,0,0.35), 0 10px 28px rgba(0,0,0,0.4);
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#17121F;
+    --surface:#211A2E;
+    --ink:#EFE9F8;
+    --ink-soft:#AC9CC7;
+    --line:#332A46;
+    --accent:#B79EF0;
+    --accent-soft:#2B2140;
+    --accent-warm:#E8A8C2;
+    --accent-warm-soft:#3B2432;
+    --shadow:0 1px 2px rgba(0,0,0,0.35), 0 10px 28px rgba(0,0,0,0.4);
+  }
+
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Public Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{ font-family:'Instrument Serif', 'Iowan Old Style', 'Palatino Linotype', serif; font-weight:400; text-wrap:balance; margin:0;}
+  .mono{ font-family:'IBM Plex Mono','SFMono-Regular',Consolas,monospace; }
+  a{ color:inherit; }
+  .wrap{ max-width:920px; margin:0 auto; padding:0 28px; }
+
+  .badge-mockup{
+    position:fixed; top:16px; right:16px; z-index:50;
+    font-family:'IBM Plex Mono',monospace; font-size:0.68rem; letter-spacing:0.08em;
+    text-transform:uppercase; color:var(--accent-warm);
+    background:var(--accent-warm-soft); border:1px solid var(--accent-warm);
+    padding:6px 10px; border-radius:3px;
+  }
+
+  nav{
+    position:sticky; top:0; z-index:40;
+    background:color-mix(in srgb, var(--paper) 88%, transparent);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  nav .wrap{ display:flex; align-items:center; justify-content:space-between; padding:16px 28px; }
+  .brand{ font-family:'Instrument Serif',serif; font-size:1.2rem; }
+  .navlinks{ display:flex; gap:22px; list-style:none; margin:0; padding:0; }
+  .navlinks a{ font-size:0.85rem; text-decoration:none; color:var(--ink-soft); }
+  .navlinks a:hover, .navlinks a:focus-visible{ color:var(--accent); }
+
+  section{ padding:76px 0; border-bottom:1px solid var(--line); }
+  section:last-of-type{ border-bottom:none; }
+  .eyebrow{
+    font-family:'IBM Plex Mono',monospace; font-size:0.72rem; letter-spacing:0.12em;
+    text-transform:uppercase; color:var(--accent); margin:0 0 14px;
+  }
+
+  /* HERO */
+  .hero{ padding-top:96px; padding-bottom:64px; }
+  .hero .eyebrow{ color:var(--ink-soft); }
+  .hero .eyebrow strong{ color:var(--accent); font-weight:600; }
+  .hero h1{ font-size:clamp(2.6rem, 6vw, 4.4rem); line-height:1.02; }
+  .role{ font-size:clamp(1.05rem,2vw,1.3rem); color:var(--accent); margin-top:10px; font-weight:600; }
+  .intro{ max-width:56ch; font-size:1.05rem; line-height:1.65; color:var(--ink-soft); margin-top:22px; }
+  .cta-row{ display:flex; flex-wrap:wrap; gap:12px; margin-top:30px; }
+  .pill{
+    display:inline-flex; align-items:center; gap:8px;
+    padding:10px 18px; border-radius:999px; border:1px solid var(--line);
+    font-size:0.88rem; font-weight:600; text-decoration:none;
+    background:var(--surface); transition:border-color .15s, transform .15s;
+  }
+  .pill:hover, .pill:focus-visible{ border-color:var(--accent); transform:translateY(-1px); }
+  .pill.solid{ background:var(--accent); border-color:var(--accent); color:var(--paper); }
+  .pill.solid:hover{ opacity:0.92; transform:translateY(-1px); }
+
+  /* ABOUT */
+  .about-grid{ display:grid; grid-template-columns:1.3fr 1fr; gap:48px; }
+  .about-grid p{ line-height:1.7; color:var(--ink-soft); }
+  .about-grid h2{ font-size:clamp(1.6rem,3vw,2rem); margin-bottom:18px; }
+  .strengths{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:12px; }
+  .strengths li{
+    display:flex; gap:10px; font-size:0.92rem; line-height:1.5; color:var(--ink);
+    background:var(--surface); border:1px solid var(--line); border-radius:8px; padding:12px 14px;
+  }
+  .strengths li::before{ content:"→"; color:var(--accent); font-weight:700; flex:none; }
+  .interests{ margin-top:20px; font-size:0.9rem; color:var(--ink-soft); border-top:1px dashed var(--line); padding-top:16px; }
+  .interests span{ color:var(--accent); font-weight:600; }
+  .edu-line{ margin-top:16px; font-size:0.82rem; color:var(--ink-soft); }
+  .edu-line b{ color:var(--ink); font-weight:600; }
+
+  /* EXPERIENCE */
+  .timeline{ position:relative; margin-top:36px; padding-left:26px; border-left:2px solid var(--line); display:flex; flex-direction:column; gap:44px; }
+  .tl-item{ position:relative; }
+  .tl-item::before{
+    content:""; position:absolute; left:-32px; top:4px;
+    width:11px; height:11px; border-radius:50%; background:var(--accent);
+    box-shadow:0 0 0 4px var(--paper);
+  }
+  .tl-head{ display:flex; flex-wrap:wrap; align-items:baseline; gap:10px 16px; }
+  .tl-role{ font-size:1.15rem; font-weight:700; }
+  .tl-company{ color:var(--accent); font-weight:600; }
+  .tl-dates{ margin-left:auto; font-size:0.78rem; color:var(--ink-soft); }
+  .tl-list{ margin:14px 0 0; padding-left:18px; color:var(--ink-soft); line-height:1.65; font-size:0.94rem; }
+  .tl-list li{ margin-bottom:4px; }
+  .tl-badge{
+    display:inline-block; margin-top:14px; font-size:0.78rem; font-weight:600;
+    color:var(--accent-warm); background:var(--accent-warm-soft);
+    padding:5px 12px; border-radius:6px;
+  }
+
+  /* SKILLS */
+  .skill-group{ margin-bottom:28px; }
+  .skill-row{ display:flex; justify-content:space-between; font-size:0.9rem; margin-bottom:8px; }
+  .skill-row .pct{ color:var(--ink-soft); }
+  .bar-track{ height:6px; border-radius:3px; background:var(--line); overflow:hidden; }
+  .bar-fill{ height:100%; background:var(--accent); border-radius:3px; }
+  .tag-wrap{ display:flex; flex-wrap:wrap; gap:8px; margin-top:32px; }
+  .tag{
+    font-size:0.82rem; padding:7px 13px; border-radius:999px;
+    background:var(--surface); border:1px solid var(--line); color:var(--ink-soft);
+  }
+
+  /* CERTIFICATIONS */
+  .cert-list{ margin-top:30px; border-top:1px solid var(--line); }
+  .cert-row{
+    display:grid; grid-template-columns:2.2fr 1.3fr 0.7fr 0.5fr; gap:16px; align-items:center;
+    padding:16px 0; border-bottom:1px solid var(--line); font-size:0.92rem;
+  }
+  .cert-name{ font-weight:600; }
+  .cert-issuer{ color:var(--ink-soft); }
+  .cert-year{ font-family:'IBM Plex Mono',monospace; color:var(--ink-soft); font-variant-numeric:tabular-nums; }
+  .cert-link{ text-align:right; color:var(--accent); text-decoration:none; font-size:0.85rem; }
+
+  /* PROJECTS */
+  .proj-grid{ display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:24px; margin-top:32px; }
+  .proj-card{
+    background:var(--surface); border:1px solid var(--line); border-radius:12px;
+    padding:26px; box-shadow:var(--shadow); display:flex; flex-direction:column; gap:14px;
+  }
+  .proj-title{ font-size:1.2rem; font-weight:700; }
+  .proj-tools{ font-size:0.76rem; color:var(--accent); font-family:'IBM Plex Mono',monospace; }
+  .proj-card h4{ font-size:0.72rem; text-transform:uppercase; letter-spacing:0.08em; color:var(--ink-soft); margin:6px 0 4px; font-family:'Public Sans'; font-weight:700; }
+  .proj-card p{ margin:0; font-size:0.88rem; line-height:1.55; color:var(--ink-soft); }
+  .metric-row{ display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:6px; }
+  .metric-tile{ background:var(--paper); border:1px solid var(--line); border-radius:8px; padding:12px 8px; text-align:center; }
+  .metric-num{ font-family:'IBM Plex Mono',monospace; font-size:1.15rem; font-weight:600; color:var(--accent-warm); font-variant-numeric:tabular-nums; }
+  .metric-label{ font-size:0.68rem; color:var(--ink-soft); margin-top:3px; text-transform:uppercase; letter-spacing:0.04em; }
+
+  /* CONTACT */
+  .contact-grid{ display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:start; }
+  .contact-grid h2{ font-size:clamp(1.8rem,3.4vw,2.4rem); }
+  .contact-grid p{ color:var(--ink-soft); line-height:1.6; max-width:42ch; }
+  form{ display:flex; flex-direction:column; gap:14px; }
+  label{ font-size:0.78rem; text-transform:uppercase; letter-spacing:0.06em; color:var(--ink-soft); }
+  input, textarea{
+    font-family:'Public Sans',sans-serif; font-size:0.95rem; padding:11px 13px;
+    border:1px solid var(--line); border-radius:7px; background:var(--surface); color:var(--ink);
+  }
+  input:focus, textarea:focus{ outline:2px solid var(--accent); outline-offset:1px; }
+  .form-note{ font-size:0.76rem; color:var(--ink-soft); margin-top:2px; }
+
+  footer{ padding:32px 0 48px; }
+  footer .wrap{ display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; font-size:0.78rem; color:var(--ink-soft); font-family:'IBM Plex Mono',monospace; }
+
+  @media (max-width: 720px){
+    .about-grid, .proj-grid, .contact-grid{ grid-template-columns:1fr; }
+    .cert-row{ grid-template-columns:1.6fr 1fr 0.6fr; }
+    .cert-link{ display:none; }
+    .metric-row{ grid-template-columns:repeat(3,1fr); }
+    .tl-dates{ margin-left:0; }
+  }
+</style>
+
+<div class="badge-mockup">Design Mockup · Sample Data</div>
+
+<nav>
+  <div class="wrap">
+    <span class="brand">SP.</span>
+    <ul class="navlinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#projects">Work</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="wrap">
+    <p class="eyebrow"><strong>● Open to new opportunities</strong> — Bangkok, TH</p>
+    <h1>Sunichaya Petcharoen</h1>
+    <p class="role">Marketing Communications &amp; Performance Marketing</p>
+    <p class="intro">I run multi-channel campaign operations at TikTok Shop Thailand and build the tracking and dashboards behind them — from UTM-tagged media plans to reporting that stakeholders actually use.</p>
+    <div class="cta-row">
+      <a class="pill solid" href="mailto:Sunichaya.petch@gmail.com">Email me</a>
+      <a class="pill" href="tel:0654956394">065-495-6394</a>
+      <a class="pill" href="#" onclick="return false;">LinkedIn ↗</a>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap about-grid">
+    <div>
+      <p class="eyebrow">About</p>
+      <h2>Marketing that lives in a dashboard</h2>
+      <p>I'm a Marketing Communications Associate at TikTok Shop Thailand, running high-volume campaign operations across TikTok, Meta, YouTube, Pangle and Programmatic. Before that, I built my analytics and paid media foundations as a Performance Marketing Intern at LINE, where I set up tracking and reported straight to C-level stakeholders.</p>
+      <div class="interests">Looking for <span>Performance Marketing</span> or <span>Marketing Technology</span> roles where I can own measurement, reporting automation, and campaign strategy end-to-end.</div>
+      <p class="edu-line"><b>B.B.A., Marketing</b> — Srinakharinwirot University · 2021–2025 · GPAX 3.59, Second Class Honors</p>
+    </div>
+    <ul class="strengths">
+      <li>Multi-channel campaign ops across TikTok, Meta, YouTube &amp; LINE Ads</li>
+      <li>Hands-on with GA4, GTM &amp; Looker Studio for tracking and reporting</li>
+      <li>Turning raw funnel data into dashboards stakeholders actually use</li>
+      <li>Cross-functional coordination with agencies, vendors &amp; creator teams</li>
+    </ul>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <p class="eyebrow">Work Experience</p>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-head">
+          <span class="tl-role">Marketing Communication Associate</span>
+          <span class="tl-company">· TikTok Shop Thailand (ByteDance)</span>
+          <span class="tl-dates mono">Sep 2025 — Present</span>
+        </div>
+        <ul class="tl-list">
+          <li>Manage high-volume campaign operations and asset deployment — hundreds of creatives across multiple campaigns — coordinating internal teams, agencies and vendors for on-time, multi-channel launches</li>
+          <li>Built automated Excel dashboards tracking Impressions, Clicks, CPM, CPC, CPPV, CPUV, ROAS and GMV, improving reporting efficiency for stakeholders</li>
+          <li>Consolidate upper- and lower-funnel performance data via UTM tracking, delivering insights to Online, Social and Creator Marketing teams</li>
+          <li>Handle campaign trafficking and deployment across TikTok, YouTube, Pangle, Programmatic and Meta</li>
+        </ul>
+        <span class="tl-badge mono">6 paid channels · multi-channel ops</span>
+      </div>
+      <div class="tl-item">
+        <div class="tl-head">
+          <span class="tl-role">Performance Marketing Intern</span>
+          <span class="tl-company">· LINE Company Thailand — LINE Rookie</span>
+          <span class="tl-dates mono">May 2025 — Aug 2025</span>
+        </div>
+        <ul class="tl-list">
+          <li>Implemented and managed media tracking using GA4, GTM, LINE Tags, LINE Custom Conversions and Meta Pixel for accurate attribution</li>
+          <li>Designed and maintained Looker Studio dashboards on user behavior and conversion flow, reporting to internal stakeholders and C-level executives</li>
+          <li>Executed and optimized paid media on LINE Ads for LINE Health and Greeting Cards</li>
+          <li>Reviewed influencer profiles and content with agencies and KOLs to maintain brand consistency</li>
+        </ul>
+        <span class="tl-badge mono">Reported to C-level</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <p class="eyebrow">Skills</p>
+    <div class="skill-group">
+      <div class="skill-row"><span>Campaign Operations &amp; Marketing Communications</span><span class="pct mono">90%</span></div>
+      <div class="bar-track"><div class="bar-fill" style="width:90%"></div></div>
+    </div>
+    <div class="skill-group">
+      <div class="skill-row"><span>Paid Media — Meta, Google, TikTok &amp; LINE Ads</span><span class="pct mono">82%</span></div>
+      <div class="bar-track"><div class="bar-fill" style="width:82%"></div></div>
+    </div>
+    <div class="skill-group">
+      <div class="skill-row"><span>Analytics &amp; Tracking — GA4, GTM, Looker Studio</span><span class="pct mono">88%</span></div>
+      <div class="bar-track"><div class="bar-fill" style="width:88%"></div></div>
+    </div>
+    <div class="tag-wrap">
+      <span class="tag">Google Analytics 4</span>
+      <span class="tag">Google Tag Manager</span>
+      <span class="tag">Google Looker Studio</span>
+      <span class="tag">Meta Ads Manager</span>
+      <span class="tag">Google Ads</span>
+      <span class="tag">Google Adwords Editor</span>
+      <span class="tag">TikTok Ads Manager</span>
+      <span class="tag">LINE Ads Platform</span>
+      <span class="tag">Social Listening (Zanroo)</span>
+      <span class="tag">Microsoft Excel</span>
+      <span class="tag">Canva</span>
+      <span class="tag">CapCut</span>
+      <span class="tag">Basic HTML/JavaScript</span>
+    </div>
+    <p class="edu-line" style="margin-top:24px;">Languages — Thai (Native), English (B1)</p>
+  </div>
+</section>
+
+<section id="certifications">
+  <div class="wrap">
+    <p class="eyebrow">Certifications</p>
+    <div class="cert-list">
+      <div class="cert-row">
+        <span class="cert-name">Foundations of Marketing &amp; E-commerce</span>
+        <span class="cert-issuer">Google x Coursera</span>
+        <span class="cert-year">—</span>
+        <a class="cert-link" href="#" onclick="return false;">View ↗</a>
+      </div>
+      <div class="cert-row">
+        <span class="cert-name">Attract and Engage Customers with Digital Marketing</span>
+        <span class="cert-issuer">Google x Coursera</span>
+        <span class="cert-year">—</span>
+        <a class="cert-link" href="#" onclick="return false;">View ↗</a>
+      </div>
+      <div class="cert-row">
+        <span class="cert-name">From Likes to Leads: Interact with Customers Online</span>
+        <span class="cert-issuer">Google x Coursera</span>
+        <span class="cert-year">—</span>
+        <a class="cert-link" href="#" onclick="return false;">View ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <p class="eyebrow">Projects / Case Studies</p>
+    <div class="proj-grid">
+      <div class="proj-card">
+        <div>
+          <div class="proj-title">LINE Thailand Business Case Competition</div>
+          <div class="proj-tools">LINE Shopping · Case Strategy · Team Leadership</div>
+        </div>
+        <div>
+          <h4>Objective</h4>
+          <p>Develop and present a business case solution for LINE Shopping as part of LINE Thailand's national case competition.</p>
+        </div>
+        <div>
+          <h4>Role</h4>
+          <p>Co-led a team through problem framing, research and solution design across the competition rounds.</p>
+        </div>
+        <div class="metric-row">
+          <div class="metric-tile"><div class="metric-num">Winner</div><div class="metric-label">Placement</div></div>
+          <div class="metric-tile"><div class="metric-num">Co-Lead</div><div class="metric-label">Role</div></div>
+          <div class="metric-tile"><div class="metric-num">National</div><div class="metric-label">Scope</div></div>
+        </div>
+      </div>
+      <div class="proj-card">
+        <div>
+          <div class="proj-title">J-MAT Award 33rd</div>
+          <div class="proj-tools">Marketing Strategy · Case Analysis · Team Leadership</div>
+        </div>
+        <div>
+          <h4>Objective</h4>
+          <p>Compete in Thailand's national marketing case competition against 257 university teams.</p>
+        </div>
+        <div>
+          <h4>Role</h4>
+          <p>Co-led the team's case analysis and strategic recommendation through multiple rounds of judging.</p>
+        </div>
+        <div class="metric-row">
+          <div class="metric-tile"><div class="metric-num">Top 7</div><div class="metric-label">Placement</div></div>
+          <div class="metric-tile"><div class="metric-num">257</div><div class="metric-label">Teams</div></div>
+          <div class="metric-tile"><div class="metric-num">H.M.</div><div class="metric-label">Honorable Mention</div></div>
+        </div>
+      </div>
+      <div class="proj-card">
+        <div>
+          <div class="proj-title">TRUE Dummy Company Program</div>
+          <div class="proj-tools">Business Simulation · Strategic Planning</div>
+        </div>
+        <div>
+          <h4>Objective</h4>
+          <p>Compete in TRUE's simulated company program, run on business strategy and execution across a series of rounds.</p>
+        </div>
+        <div class="metric-row">
+          <div class="metric-tile"><div class="metric-num">Top 6</div><div class="metric-label">Placement</div></div>
+          <div class="metric-tile"><div class="metric-num">Finalist</div><div class="metric-label">Result</div></div>
+          <div class="metric-tile"><div class="metric-num">H.M.</div><div class="metric-label">Honorable Mention</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap contact-grid">
+    <div>
+      <h2>Let's talk marketing.</h2>
+      <p>Open to full-time marketing communications, performance marketing, and marketing technology roles in Bangkok or remote.</p>
+      <div class="cta-row">
+        <a class="pill solid" href="mailto:Sunichaya.petch@gmail.com">Sunichaya.petch@gmail.com</a>
+        <a class="pill" href="tel:0654956394">065-495-6394</a>
+        <a class="pill" href="#" onclick="return false;">LinkedIn ↗</a>
+      </div>
+    </div>
+    <form onsubmit="return false;">
+      <div>
+        <label for="m-name">Name</label>
+        <input id="m-name" type="text" placeholder="Your name">
+      </div>
+      <div>
+        <label for="m-email">Email</label>
+        <input id="m-email" type="email" placeholder="you@company.com">
+      </div>
+      <div>
+        <label for="m-msg">Message</label>
+        <textarea id="m-msg" rows="4" placeholder="Say hello, or attach a role you're hiring for"></textarea>
+      </div>
+      <a class="pill solid" href="#" onclick="return false;" style="text-align:center; justify-content:center;">Send message</a>
+      <p class="form-note">* Mockup only — form ยังไม่เชื่อมต่อระบบจริงในหน้านี้</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Sunichaya Petcharoen</span>
+    <span>Design mockup — not the final site</span>
+  </div>
+</footer>
