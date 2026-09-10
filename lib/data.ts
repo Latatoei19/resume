@@ -25,6 +25,7 @@ export const profile: Profile = {
   interests:
     "Looking for Performance Marketing or Marketing Technology roles where I can own measurement, reporting automation, and campaign strategy end-to-end.",
   education: {
+    logo: "/logos/swu.png",
     degree: "B.B.A., Marketing",
     school: "Srinakharinwirot University",
     period: "2021–2025",
@@ -45,8 +46,8 @@ export const experiences: Experience[] = [
       "Build online advertising strategy and media plans across Meta Ads, TikTok Ads, YouTube Ads and Google Ads — selecting platforms, objectives and flight durations, allocating budget, designing audiences, and forecasting KPI targets for both client and in-house projects",
       "Run media buying end to end against plan: campaign setup, testing, optimization and KPI analysis, monitoring delivery to hit target results",
       "Analyze performance data and build reports to present results and hand work over to stakeholders",
-      "Own paid media across all eight THE STANDARD outlets — THE STANDARD, THE Secret Sauce, THE STANDARD WEALTH, THE STANDARD SPORT, THE STANDARD LIFE, THE STANDARD POP, KND and THE STANDARD Podcast",
-      "Run advertising for flagship events including Alpha Skill (internal), The Secret Sauce Business Weekend Isan, The Secret Sauce Summit 2026 and Economic Forum 2026",
+      "Own paid media across all eight THE STANDARD outlets — THE STANDARD, THE SECRET SAUCE, THE STANDARD WEALTH, THE STANDARD SPORT, THE STANDARD LIFE, THE STANDARD POP, KND and THE STANDARD PODCAST",
+      "Run advertising for flagship events including Alpha Skill (internal), THE SECRET SAUCE Business Weekend Isan, THE SECRET SAUCE Summit 2026 and THE STANDARD ECONOMIC FORUM 2026",
       "Track platform and trend updates across Facebook, Instagram, TikTok, YouTube and Google to keep buying strategy current",
     ],
     badge: "8 outlets · 4 flagship events",

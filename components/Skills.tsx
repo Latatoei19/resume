@@ -9,7 +9,7 @@ import {
 } from "simple-icons";
 import { platformTools, profile, skillAreas, supportTools } from "@/lib/data";
 
-const brandIcons: Record<string, { path: string }> = {
+const brandIcons: Record<string, { path: string; hex: string }> = {
   meta: siMeta,
   googleads: siGoogleads,
   tiktok: siTiktok,
@@ -51,13 +51,14 @@ export default function Skills() {
               key={tool.name}
               className="flex items-center gap-3 rounded-lg border border-line bg-surface px-4 py-3"
             >
-              <svg
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-                className="h-5 w-5 shrink-0 fill-accent"
-              >
-                <path d={brandIcons[tool.icon].path} />
-              </svg>
+              <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-md border border-line bg-white">
+                <svg viewBox="0 0 24 24" aria-hidden="true" className="h-[15px] w-[15px]">
+                  <path
+                    d={brandIcons[tool.icon].path}
+                    fill={`#${brandIcons[tool.icon].hex}`}
+                  />
+                </svg>
+              </span>
               <span className="text-[0.85rem] leading-tight">{tool.name}</span>
             </div>
           ))}

@@ -15,6 +15,7 @@ export type Profile = {
   strengths: string[];
   interests: string;
   education: {
+    logo: string;
     degree: string;
     school: string;
     period: string;
