@@ -7,9 +7,7 @@ export default function Certifications() {
   return (
     <section id="certifications" className="border-b border-line py-[76px]">
       <div className="mx-auto w-full max-w-[920px] px-7">
-        <p className="mb-3.5 font-mono text-[0.8rem] uppercase tracking-[0.12em] text-accent">
-          Certifications
-        </p>
+        <h2 className="mb-8 font-serif text-[clamp(1.7rem,3.2vw,2.15rem)] leading-tight text-balance">Certifications</h2>
         <div className="mt-8 flex flex-col gap-10">
           {categories.map((category) => (
             <div key={category}>

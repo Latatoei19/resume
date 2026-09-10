@@ -7,7 +7,7 @@ export default function Contact() {
     <section id="contact" className="py-[76px]">
       <div className="mx-auto grid w-full max-w-[920px] grid-cols-1 items-start gap-12 px-7 md:grid-cols-2">
         <div>
-          <h2 className="font-serif text-[clamp(1.8rem,3.4vw,2.4rem)] text-balance">
+          <h2 className="font-serif text-[clamp(1.7rem,3.2vw,2.15rem)] leading-tight text-balance">
             Let&apos;s talk marketing.
           </h2>
           <p className="mt-3 max-w-[42ch] leading-relaxed text-ink-soft">

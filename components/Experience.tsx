@@ -28,9 +28,7 @@ export default function Experience() {
   return (
     <section id="experience" className="border-b border-line py-[76px]">
       <div className="mx-auto w-full max-w-[920px] px-7">
-        <p className="mb-3.5 font-mono text-[0.8rem] uppercase tracking-[0.12em] text-accent">
-          Work Experience
-        </p>
+        <h2 className="mb-8 font-serif text-[clamp(1.7rem,3.2vw,2.15rem)] leading-tight text-balance">Work Experience</h2>
         <div className="mt-9 flex flex-col gap-11 border-l-2 border-line pl-[26px]">
           {experiences.map((job) => (
             <div key={`${job.company}-${job.role}`} className="relative">

@@ -8,12 +8,12 @@ export default function About() {
     <section id="about" className="border-b border-line py-[76px]">
       <div className="mx-auto grid w-full max-w-[920px] grid-cols-1 gap-8 px-7 md:grid-cols-[0.85fr_1.4fr] md:gap-12">
         <div>
-          <p className="mb-3.5 font-mono text-[0.8rem] uppercase tracking-[0.12em] text-accent">
+          <h2 className="font-serif text-[clamp(1.7rem,3.2vw,2.15rem)] leading-tight text-balance">
             About
-          </p>
-          <h2 className="font-serif text-[clamp(1.6rem,3vw,2rem)] leading-tight text-balance">
-            Marketing that lives in a dashboard
           </h2>
+          <p className="mt-3 font-serif text-[1.15rem] italic text-ink-soft text-balance">
+            Marketing that lives in a dashboard
+          </p>
         </div>
         <div>
           <p className="leading-[1.7] text-ink-soft">{profile.summary}</p>

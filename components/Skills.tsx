@@ -23,9 +23,7 @@ export default function Skills() {
   return (
     <section id="skills" className="border-b border-line py-[76px]">
       <div className="mx-auto w-full max-w-[920px] px-7">
-        <p className="mb-3.5 font-mono text-[0.8rem] uppercase tracking-[0.12em] text-accent">
-          Skills
-        </p>
+        <h2 className="mb-8 font-serif text-[clamp(1.7rem,3.2vw,2.15rem)] leading-tight text-balance">Skills</h2>
 
         <h3 className="mb-4 font-mono text-[0.88rem] uppercase tracking-[0.1em]">Platforms</h3>
         <div className="grid grid-cols-[repeat(auto-fill,minmax(190px,1fr))] gap-3">
