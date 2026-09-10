@@ -1,7 +1,6 @@
 import type {
   Certification,
   Experience,
-  Photo,
   PlatformTool,
   Profile,
   Project,
@@ -51,6 +50,8 @@ export const experiences: Experience[] = [
       "Track platform and trend updates across Facebook, Instagram, TikTok, YouTube and Google to keep buying strategy current",
     ],
     badge: "8 outlets · 4 flagship events",
+    photo: null,
+    photoAlt: null,
   },
   {
     role: "Marketing Communication Associate",
@@ -63,6 +64,9 @@ export const experiences: Experience[] = [
       "Handle campaign trafficking and deployment across TikTok, YouTube, Pangle, Programmatic and Meta",
     ],
     badge: "6 paid channels · multi-channel ops",
+    photo: "/photos/tiktok-shop-office.jpg",
+    photoAlt:
+      "Sunichaya standing beside the illuminated TikTok logo at the TikTok Shop Thailand office",
   },
   {
     role: "Performance Marketing Intern",
@@ -75,19 +79,9 @@ export const experiences: Experience[] = [
       "Reviewed influencer profiles and content with agencies and KOLs to maintain brand consistency",
     ],
     badge: "Reported to C-level",
-  },
-];
-
-export const photos: Photo[] = [
-  {
-    src: "/photos/tiktok-shop-office.jpg",
-    alt: "Sunichaya standing beside the illuminated TikTok logo at the TikTok Shop Thailand office",
-    caption: "ByteDance (TikTok Shop Thailand)",
-  },
-  {
-    src: "/photos/line-cafe.jpg",
-    alt: "Sunichaya beside a giant Brown character at LINE Cafe inside the LINE Thailand office",
-    caption: "LINE Thailand",
+    photo: "/photos/line-cafe.jpg",
+    photoAlt:
+      "Sunichaya beside a giant Brown character at LINE Cafe inside the LINE Thailand office",
   },
 ];
 

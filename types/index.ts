@@ -25,6 +25,8 @@ export type Experience = {
   period: string;
   responsibilities: string[];
   badge: string;
+  photo: string | null;
+  photoAlt: string | null;
 };
 
 export type SkillArea = {
@@ -43,12 +45,6 @@ export type Certification = {
   year: string;
   category: string;
   image: string;
-};
-
-export type Photo = {
-  src: string;
-  alt: string;
-  caption: string;
 };
 
 export type Metric = {
