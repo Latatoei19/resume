@@ -82,12 +82,12 @@ export const photos: Photo[] = [
   {
     src: "/photos/tiktok-shop-office.jpg",
     alt: "Sunichaya standing beside the illuminated TikTok logo at the TikTok Shop Thailand office",
-    caption: "TikTok Shop Thailand",
+    caption: "ByteDance (TikTok Shop Thailand)",
   },
   {
     src: "/photos/line-cafe.jpg",
     alt: "Sunichaya beside a giant Brown character at LINE Cafe inside the LINE Thailand office",
-    caption: "LINE Cafe, LINE Thailand",
+    caption: "LINE Thailand",
   },
 ];
 
