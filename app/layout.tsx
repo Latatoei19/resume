@@ -21,8 +21,21 @@ const plexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://baitoeypetcharoen.vercel.app"),
   title: `${profile.name} — ${profile.headline}`,
   description: profile.intro,
+  openGraph: {
+    type: "profile",
+    title: `${profile.name} — ${profile.headline}`,
+    description: profile.intro,
+    siteName: profile.name,
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${profile.name} — ${profile.headline}`,
+    description: profile.intro,
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
