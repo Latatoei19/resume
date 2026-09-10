@@ -165,6 +165,7 @@ export const skillGroups: SkillGroup[] = [
     items: [
       "Media Tracking",
       "Performance Reporting",
+      "Supermetrics",
       "YouTube Analytics",
       "Data Analysis",
     ],
@@ -176,6 +177,7 @@ export const skillGroups: SkillGroup[] = [
       "AI Agent Workflows",
       "Prompt Engineering",
       "Claude Code",
+      "ChatGPT",
       "N8N Workflow Automation",
       "Workflow Automation",
       "Reporting Automation",
@@ -208,6 +210,8 @@ export const skillGroups: SkillGroup[] = [
       "Basic JavaScript",
       "Google Workspace",
       "Microsoft Office",
+      "Lark Base",
+      "Trello",
     ],
   },
 ];
