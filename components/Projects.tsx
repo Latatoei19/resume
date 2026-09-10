@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { projects } from "@/lib/data";
 
 export default function Projects() {
@@ -13,6 +14,17 @@ export default function Projects() {
               key={project.title}
               className="flex flex-col gap-3.5 rounded-xl border border-line bg-surface p-[26px] shadow-card"
             >
+              {project.image && (
+                <div className="relative aspect-[4/3] overflow-hidden rounded-md border border-line bg-paper">
+                  <Image
+                    src={project.image}
+                    alt={`Award certificate for ${project.title}`}
+                    fill
+                    sizes="270px"
+                    className="object-contain"
+                  />
+                </div>
+              )}
               <div>
                 <h3 className="font-sans text-[1.2rem] font-bold text-balance">{project.title}</h3>
                 <p className="mt-1 font-mono text-[0.76rem] text-accent">{project.tools}</p>

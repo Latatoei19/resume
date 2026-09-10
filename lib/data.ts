@@ -227,6 +227,7 @@ export const projects: Project[] = [
       { value: "National", label: "Scope" },
     ],
     certificateUrl: null,
+    image: null,
   },
   {
     title: "J-MAT Award 33rd",
@@ -241,6 +242,7 @@ export const projects: Project[] = [
     ],
     certificateUrl:
       "https://drive.google.com/file/d/1hiwpJrvpPUjjxM-fGhKdW5JnsCCwOTur/view",
+    image: "/projects/jmat-award.jpg",
   },
   {
     title: "TRUE Dummy Company Program",
@@ -255,5 +257,6 @@ export const projects: Project[] = [
     ],
     certificateUrl:
       "https://drive.google.com/file/d/1kTZ81s4_zcQjt7xILy_bmPauCFA2pMHF/view",
+    image: "/projects/true-award.jpg",
   },
 ];

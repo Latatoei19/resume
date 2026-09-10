@@ -64,4 +64,5 @@ export type Project = {
   role: string | null;
   metrics: Metric[];
   certificateUrl: string | null;
+  image: string | null;
 };
