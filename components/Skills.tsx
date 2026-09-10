@@ -7,7 +7,7 @@ import {
   siMeta,
   siTiktok,
 } from "simple-icons";
-import { platformTools, profile, skillAreas, supportTools } from "@/lib/data";
+import { platformTools, profile, skills } from "@/lib/data";
 
 const brandIcons: Record<string, { path: string; hex: string }> = {
   meta: siMeta,
@@ -27,25 +27,8 @@ export default function Skills() {
           Skills
         </p>
 
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-3">
-          {skillAreas.map((area) => (
-            <div key={area.title}>
-              <h3 className="mb-3 border-b border-line pb-2 font-mono text-[0.74rem] uppercase tracking-[0.1em]">
-                {area.title}
-              </h3>
-              <ul className="flex flex-col gap-1.5 text-[0.9rem] leading-snug text-ink-soft">
-                {area.items.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-
-        <h3 className="mt-12 mb-4 font-mono text-[0.74rem] uppercase tracking-[0.1em]">
-          Platforms
-        </h3>
-        <div className="grid grid-cols-[repeat(auto-fill,minmax(170px,1fr))] gap-3">
+        <h3 className="mb-4 font-mono text-[0.74rem] uppercase tracking-[0.1em]">Platforms</h3>
+        <div className="grid grid-cols-[repeat(auto-fill,minmax(190px,1fr))] gap-3">
           {platformTools.map((tool) => (
             <div
               key={tool.name}
@@ -65,12 +48,12 @@ export default function Skills() {
         </div>
 
         <div className="mt-6 flex flex-wrap gap-2">
-          {supportTools.map((tool) => (
+          {skills.map((skill) => (
             <span
-              key={tool}
+              key={skill}
               className="rounded-full border border-line bg-surface px-[13px] py-[7px] text-[0.82rem] text-ink-soft"
             >
-              {tool}
+              {skill}
             </span>
           ))}
         </div>

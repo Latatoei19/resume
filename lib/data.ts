@@ -4,7 +4,6 @@ import type {
   PlatformTool,
   Profile,
   Project,
-  SkillArea,
 } from "@/types";
 
 export const profile: Profile = {
@@ -47,7 +46,7 @@ export const experiences: Experience[] = [
       "Run media buying end to end against plan: campaign setup, testing, optimization and KPI analysis, monitoring delivery to hit target results",
       "Analyze performance data and build reports to present results and hand work over to stakeholders",
       "Own paid media across all eight THE STANDARD outlets — THE STANDARD, THE SECRET SAUCE, THE STANDARD WEALTH, THE STANDARD SPORT, THE STANDARD LIFE, THE STANDARD POP, KND and THE STANDARD PODCAST",
-      "Run advertising for flagship events including Alpha Skill (internal), THE SECRET SAUCE Business Weekend Isan, THE SECRET SAUCE Summit 2026 and THE STANDARD ECONOMIC FORUM 2026",
+      "Run advertising for flagship events including ALPHA SKILLS SUMMIT, THE SECRET SAUCE Business Weekend Isan, THE SECRET SAUCE Summit 2026 and THE STANDARD ECONOMIC FORUM 2026",
       "Track platform and trend updates across Facebook, Instagram, TikTok, YouTube and Google to keep buying strategy current",
     ],
     badge: "8 outlets · 4 flagship events",
@@ -134,60 +133,46 @@ export const experiences: Experience[] = [
   },
 ];
 
-export const skillAreas: SkillArea[] = [
-  {
-    title: "Paid Media & Buying",
-    items: [
-      "Media planning",
-      "Budget allocation & pacing",
-      "Audience design",
-      "KPI forecasting",
-      "Campaign setup & optimization",
-      "Creative & ad copy QA",
-      "Campaign trafficking",
-    ],
-  },
-  {
-    title: "Analytics & Tracking",
-    items: [
-      "GA4 implementation",
-      "Google Tag Manager",
-      "UTM tracking & attribution",
-      "Looker Studio dashboards",
-      "Meta Pixel",
-      "LINE Tags & Custom Conversions",
-      "Performance reporting",
-    ],
-  },
-  {
-    title: "Campaign Operations",
-    items: [
-      "Multi-channel launch management",
-      "Asset & creative deployment",
-      "Agency & vendor coordination",
-      "Quotation & budget reconciliation",
-      "Cross-team stakeholder reporting",
-    ],
-  },
-];
-
 export const platformTools: PlatformTool[] = [
-  { name: "Meta Ads Manager", icon: "meta" },
+  { name: "Meta Ads", icon: "meta" },
   { name: "Google Ads", icon: "googleads" },
-  { name: "TikTok Ads Manager", icon: "tiktok" },
-  { name: "LINE Ads Platform", icon: "line" },
-  { name: "Google Analytics 4", icon: "googleanalytics" },
+  { name: "TikTok Ad Manager", icon: "tiktok" },
+  { name: "LINE Ads", icon: "line" },
+  { name: "Google Analytics", icon: "googleanalytics" },
   { name: "Google Tag Manager", icon: "googletagmanager" },
-  { name: "Looker Studio", icon: "looker" },
+  { name: "Google Looker Studio", icon: "looker" },
 ];
 
-export const supportTools: string[] = [
-  "Google Adwords Editor",
-  "Microsoft Excel",
-  "Social Listening (Zanroo)",
-  "Canva",
-  "CapCut",
-  "Basic HTML/JavaScript",
+export const skills: string[] = [
+  "Google Performance Max",
+  "TikTok GMV Max",
+  "Meta Business Suite",
+  "Google Ads Editor",
+  "Search Engine Marketing (SEM)",
+  "Media Planning",
+  "Media Optimization",
+  "Media Tracking",
+  "Performance Reporting",
+  "Automation Dashboard",
+  "N8N Workflow Automation",
+  "YouTube Analytics",
+  "Data Analysis",
+  "Consumer Insight",
+  "Research Skills",
+  "Marketing Research",
+  "Marketing Strategy",
+  "Marketing Plan",
+  "Digital Marketing",
+  "Online Marketing",
+  "Multimedia Marketing Campaigns",
+  "KOL Management",
+  "Social Listening",
+  "Account Management",
+  "Messaging API",
+  "Basic HTML",
+  "Basic JavaScript",
+  "Google Workspace",
+  "Microsoft Office",
 ];
 
 export const certifications: Certification[] = [

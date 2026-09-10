@@ -38,11 +38,6 @@ export type Experience = {
   photos: RolePhoto[];
 };
 
-export type SkillArea = {
-  title: string;
-  items: string[];
-};
-
 export type PlatformTool = {
   name: string;
   icon: string;
