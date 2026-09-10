@@ -31,6 +31,16 @@ export default function Projects() {
                   <p className="text-[0.88rem] leading-snug text-ink-soft">{project.role}</p>
                 </div>
               )}
+              {project.certificateUrl && (
+                <a
+                  href={project.certificateUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[0.8rem] font-semibold text-accent no-underline hover:underline"
+                >
+                  Certificate ↗
+                </a>
+              )}
               <div className="mt-auto grid grid-cols-3 gap-2.5 pt-1">
                 {project.metrics.map((metric) => (
                   <div

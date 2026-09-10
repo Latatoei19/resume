@@ -87,22 +87,52 @@ export const tools: string[] = [
 
 export const certifications: Certification[] = [
   {
-    name: "Foundations of Marketing & E-commerce",
+    name: "Foundations of Digital Marketing and E-commerce",
     issuer: "Google x Coursera",
-    year: "—",
-    url: null,
+    year: "2023",
+    url: "https://coursera.org/verify/ZYBWFSBPTTC6",
   },
   {
     name: "Attract and Engage Customers with Digital Marketing",
     issuer: "Google x Coursera",
-    year: "—",
-    url: null,
+    year: "2023",
+    url: "https://coursera.org/verify/TYZACZHB6SHK",
   },
   {
     name: "From Likes to Leads: Interact with Customers Online",
     issuer: "Google x Coursera",
-    year: "—",
-    url: null,
+    year: "2023",
+    url: "https://coursera.org/verify/Y5DV2JLTT9B8",
+  },
+  {
+    name: "Effective Data Storytelling",
+    issuer: "Skooldio",
+    year: "2025",
+    url: "https://drive.google.com/file/d/1WUaCj0PiA_h5qpgKX1cZtNiFNNDyWaaO/view",
+  },
+  {
+    name: "Marketing Trainee 37th",
+    issuer: "Marketing Association of Thailand",
+    year: "2024",
+    url: "https://drive.google.com/file/d/1xL2_6mjgJoLDqvc65HDyjTOJR-EW91uj/view",
+  },
+  {
+    name: "NFT: A New Approach to Marketing Strategy",
+    issuer: "Bitkub Academy × Chulalongkorn University",
+    year: "2023",
+    url: "https://drive.google.com/file/d/1FolqVhcNwvGWjHAqWPuz5xvB19sZwHoj/view",
+  },
+  {
+    name: "Demographic Disruption and Business",
+    issuer: "CHULA MOOC × Sasin",
+    year: "2022",
+    url: "https://drive.google.com/file/d/15Ir-L6k1SEeUmtAeyeHTn-lDUilCwbi5/view",
+  },
+  {
+    name: "Critical Thinking for Business",
+    issuer: "CHULA MOOC",
+    year: "2022",
+    url: "https://drive.google.com/file/d/1yq2Yi-6NqNPr4mAsAEMD2tfToPWsezdQ/view",
   },
 ];
 
@@ -118,6 +148,7 @@ export const projects: Project[] = [
       { value: "Co-Lead", label: "Role" },
       { value: "National", label: "Scope" },
     ],
+    certificateUrl: null,
   },
   {
     title: "J-MAT Award 33rd",
@@ -130,6 +161,8 @@ export const projects: Project[] = [
       { value: "257", label: "Teams" },
       { value: "H.M.", label: "Honorable Mention" },
     ],
+    certificateUrl:
+      "https://drive.google.com/file/d/1hiwpJrvpPUjjxM-fGhKdW5JnsCCwOTur/view",
   },
   {
     title: "TRUE Dummy Company Program",
@@ -142,5 +175,7 @@ export const projects: Project[] = [
       { value: "Finalist", label: "Result" },
       { value: "H.M.", label: "Honorable Mention" },
     ],
+    certificateUrl:
+      "https://drive.google.com/file/d/1kTZ81s4_zcQjt7xILy_bmPauCFA2pMHF/view",
   },
 ];

@@ -51,4 +51,5 @@ export type Project = {
   objective: string;
   role: string | null;
   metrics: Metric[];
+  certificateUrl: string | null;
 };

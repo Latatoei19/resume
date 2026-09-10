@@ -21,7 +21,7 @@ export default function Certifications() {
                   href={cert.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hidden text-right text-[0.85rem] text-accent no-underline hover:underline sm:block"
+                  className="text-[0.85rem] text-accent no-underline hover:underline sm:text-right"
                 >
                   View ↗
                 </a>
