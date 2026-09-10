@@ -41,21 +41,21 @@ export default function Projects() {
                   Certificate ↗
                 </a>
               )}
-              <div className="mt-auto grid grid-cols-3 gap-2.5 pt-1">
+              <dl className="mt-auto border-t border-line">
                 {project.metrics.map((metric) => (
                   <div
                     key={metric.label}
-                    className="rounded-lg border border-line bg-paper px-2 py-3 text-center"
+                    className="flex items-baseline justify-between gap-4 border-b border-line py-2.5 last:border-b-0"
                   >
-                    <div className="font-mono text-[1.05rem] font-semibold tabular-nums text-accent-warm">
-                      {metric.value}
-                    </div>
-                    <div className="mt-1 text-[0.66rem] uppercase tracking-wide text-ink-soft">
+                    <dt className="text-[0.7rem] uppercase tracking-[0.06em] text-ink-soft">
                       {metric.label}
-                    </div>
+                    </dt>
+                    <dd className="text-right font-mono text-[0.92rem] font-semibold tabular-nums text-accent-warm">
+                      {metric.value}
+                    </dd>
                   </div>
                 ))}
-              </div>
+              </dl>
             </article>
           ))}
         </div>

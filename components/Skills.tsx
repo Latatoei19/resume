@@ -1,4 +1,23 @@
-import { profile, skillGroups, tools } from "@/lib/data";
+import {
+  siGoogleads,
+  siGoogleanalytics,
+  siGoogletagmanager,
+  siLine,
+  siLooker,
+  siMeta,
+  siTiktok,
+} from "simple-icons";
+import { platformTools, profile, skillAreas, supportTools } from "@/lib/data";
+
+const brandIcons: Record<string, { path: string }> = {
+  meta: siMeta,
+  googleads: siGoogleads,
+  tiktok: siTiktok,
+  line: siLine,
+  googleanalytics: siGoogleanalytics,
+  googletagmanager: siGoogletagmanager,
+  looker: siLooker,
+};
 
 export default function Skills() {
   return (
@@ -7,24 +26,45 @@ export default function Skills() {
         <p className="mb-3.5 font-mono text-[0.72rem] uppercase tracking-[0.12em] text-accent">
           Skills
         </p>
-        <div className="flex flex-col gap-7">
-          {skillGroups.map((skill) => (
-            <div key={skill.label}>
-              <div className="mb-2 flex justify-between gap-4 text-[0.9rem]">
-                <span>{skill.label}</span>
-                <span className="font-mono tabular-nums text-ink-soft">{skill.level}%</span>
-              </div>
-              <div className="h-1.5 overflow-hidden rounded-full bg-line">
-                <div
-                  className="h-full rounded-full bg-accent"
-                  style={{ width: `${skill.level}%` }}
-                />
-              </div>
+
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-3">
+          {skillAreas.map((area) => (
+            <div key={area.title}>
+              <h3 className="mb-3 border-b border-line pb-2 font-mono text-[0.74rem] uppercase tracking-[0.1em]">
+                {area.title}
+              </h3>
+              <ul className="flex flex-col gap-1.5 text-[0.9rem] leading-snug text-ink-soft">
+                {area.items.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
             </div>
           ))}
         </div>
-        <div className="mt-8 flex flex-wrap gap-2">
-          {tools.map((tool) => (
+
+        <h3 className="mt-12 mb-4 font-mono text-[0.74rem] uppercase tracking-[0.1em]">
+          Platforms
+        </h3>
+        <div className="grid grid-cols-[repeat(auto-fill,minmax(170px,1fr))] gap-3">
+          {platformTools.map((tool) => (
+            <div
+              key={tool.name}
+              className="flex items-center gap-3 rounded-lg border border-line bg-surface px-4 py-3"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                className="h-5 w-5 shrink-0 fill-accent"
+              >
+                <path d={brandIcons[tool.icon].path} />
+              </svg>
+              <span className="text-[0.85rem] leading-tight">{tool.name}</span>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-6 flex flex-wrap gap-2">
+          {supportTools.map((tool) => (
             <span
               key={tool}
               className="rounded-full border border-line bg-surface px-[13px] py-[7px] text-[0.82rem] text-ink-soft"
@@ -33,7 +73,8 @@ export default function Skills() {
             </span>
           ))}
         </div>
-        <p className="mt-6 text-[0.82rem] text-ink-soft">Languages — {profile.languages}</p>
+
+        <p className="mt-8 text-[0.82rem] text-ink-soft">Languages — {profile.languages}</p>
       </div>
     </section>
   );

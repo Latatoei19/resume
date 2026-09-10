@@ -27,9 +27,14 @@ export type Experience = {
   badge: string;
 };
 
-export type SkillGroup = {
-  label: string;
-  level: number;
+export type SkillArea = {
+  title: string;
+  items: string[];
+};
+
+export type PlatformTool = {
+  name: string;
+  icon: string;
 };
 
 export type Certification = {

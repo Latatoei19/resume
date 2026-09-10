@@ -2,9 +2,10 @@ import type {
   Certification,
   Experience,
   Photo,
+  PlatformTool,
   Profile,
   Project,
-  SkillGroup,
+  SkillArea,
 } from "@/types";
 
 export const profile: Profile = {
@@ -95,23 +96,57 @@ export const photos: Photo[] = [
   },
 ];
 
-export const skillGroups: SkillGroup[] = [
-  { label: "Campaign Operations & Marketing Communications", level: 90 },
-  { label: "Paid Media — Meta, Google, TikTok & LINE Ads", level: 82 },
-  { label: "Analytics & Tracking — GA4, GTM, Looker Studio", level: 88 },
+export const skillAreas: SkillArea[] = [
+  {
+    title: "Paid Media & Buying",
+    items: [
+      "Media planning",
+      "Budget allocation & pacing",
+      "Audience design",
+      "KPI forecasting",
+      "Campaign setup & optimization",
+      "Creative & ad copy QA",
+      "Campaign trafficking",
+    ],
+  },
+  {
+    title: "Analytics & Tracking",
+    items: [
+      "GA4 implementation",
+      "Google Tag Manager",
+      "UTM tracking & attribution",
+      "Looker Studio dashboards",
+      "Meta Pixel",
+      "LINE Tags & Custom Conversions",
+      "Performance reporting",
+    ],
+  },
+  {
+    title: "Campaign Operations",
+    items: [
+      "Multi-channel launch management",
+      "Asset & creative deployment",
+      "Agency & vendor coordination",
+      "Quotation & budget reconciliation",
+      "Cross-team stakeholder reporting",
+    ],
+  },
 ];
 
-export const tools: string[] = [
-  "Google Analytics 4",
-  "Google Tag Manager",
-  "Google Looker Studio",
-  "Meta Ads Manager",
-  "Google Ads",
+export const platformTools: PlatformTool[] = [
+  { name: "Meta Ads Manager", icon: "meta" },
+  { name: "Google Ads", icon: "googleads" },
+  { name: "TikTok Ads Manager", icon: "tiktok" },
+  { name: "LINE Ads Platform", icon: "line" },
+  { name: "Google Analytics 4", icon: "googleanalytics" },
+  { name: "Google Tag Manager", icon: "googletagmanager" },
+  { name: "Looker Studio", icon: "looker" },
+];
+
+export const supportTools: string[] = [
   "Google Adwords Editor",
-  "TikTok Ads Manager",
-  "LINE Ads Platform",
-  "Social Listening (Zanroo)",
   "Microsoft Excel",
+  "Social Listening (Zanroo)",
   "Canva",
   "CapCut",
   "Basic HTML/JavaScript",

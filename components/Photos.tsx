@@ -11,15 +11,15 @@ export default function Photos() {
         <h2 className="mb-9 font-serif text-[clamp(1.6rem,3vw,2rem)] text-balance">
           Inside the platforms I buy on
         </h2>
-        <div className="flex flex-wrap gap-6">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
           {photos.map((photo) => (
-            <figure key={photo.src} className="photo-card w-[min(100%,280px)]">
+            <figure key={photo.src} className="photo-card">
               <div className="relative aspect-[3/4] overflow-hidden rounded-xl border border-line bg-surface shadow-card">
                 <Image
                   src={photo.src}
                   alt={photo.alt}
                   fill
-                  sizes="(max-width: 720px) 100vw, 280px"
+                  sizes="(max-width: 640px) 100vw, 290px"
                   className="photo-img object-cover"
                 />
               </div>
