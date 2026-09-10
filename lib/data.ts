@@ -159,6 +159,7 @@ export const certifications: Certification[] = [
     year: "2023",
     url: "https://coursera.org/verify/ZYBWFSBPTTC6",
     category: "Digital Marketing",
+    image: "/certificates/foundations-digital-marketing.jpg",
   },
   {
     name: "Attract and Engage Customers with Digital Marketing",
@@ -166,6 +167,7 @@ export const certifications: Certification[] = [
     year: "2023",
     url: "https://coursera.org/verify/TYZACZHB6SHK",
     category: "Digital Marketing",
+    image: "/certificates/attract-engage-customers.jpg",
   },
   {
     name: "From Likes to Leads: Interact with Customers Online",
@@ -173,6 +175,7 @@ export const certifications: Certification[] = [
     year: "2023",
     url: "https://coursera.org/verify/Y5DV2JLTT9B8",
     category: "Digital Marketing",
+    image: "/certificates/likes-to-leads.jpg",
   },
   {
     name: "Effective Data Storytelling",
@@ -180,6 +183,7 @@ export const certifications: Certification[] = [
     year: "2025",
     url: "https://drive.google.com/file/d/1WUaCj0PiA_h5qpgKX1cZtNiFNNDyWaaO/view",
     category: "Marketing Strategy & Data",
+    image: "/certificates/effective-data-storytelling.jpg",
   },
   {
     name: "Marketing Trainee 37th",
@@ -187,6 +191,7 @@ export const certifications: Certification[] = [
     year: "2024",
     url: "https://drive.google.com/file/d/1xL2_6mjgJoLDqvc65HDyjTOJR-EW91uj/view",
     category: "Marketing Strategy & Data",
+    image: "/certificates/marketing-trainee-37.jpg",
   },
   {
     name: "NFT: A New Approach to Marketing Strategy",
@@ -194,6 +199,7 @@ export const certifications: Certification[] = [
     year: "2023",
     url: "https://drive.google.com/file/d/1FolqVhcNwvGWjHAqWPuz5xvB19sZwHoj/view",
     category: "Marketing Strategy & Data",
+    image: "/certificates/nft-marketing-strategy.jpg",
   },
   {
     name: "Demographic Disruption and Business",
@@ -201,6 +207,7 @@ export const certifications: Certification[] = [
     year: "2022",
     url: "https://drive.google.com/file/d/15Ir-L6k1SEeUmtAeyeHTn-lDUilCwbi5/view",
     category: "Business Foundations",
+    image: "/certificates/demographic-disruption.jpg",
   },
   {
     name: "Critical Thinking for Business",
@@ -208,6 +215,7 @@ export const certifications: Certification[] = [
     year: "2022",
     url: "https://drive.google.com/file/d/1yq2Yi-6NqNPr4mAsAEMD2tfToPWsezdQ/view",
     category: "Business Foundations",
+    image: "/certificates/critical-thinking-business.jpg",
   },
 ];
 

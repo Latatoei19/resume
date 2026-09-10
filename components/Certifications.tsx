@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { certifications } from "@/lib/data";
 
 export default function Certifications() {
@@ -21,13 +22,22 @@ export default function Certifications() {
                   .map((cert) => (
                     <article
                       key={cert.name}
-                      className="flex w-[300px] shrink-0 snap-start flex-col justify-between gap-5 rounded-xl border border-line bg-surface p-5 shadow-card"
+                      className="flex w-[300px] shrink-0 snap-start flex-col gap-4 rounded-xl border border-line bg-surface p-5 shadow-card"
                     >
+                      <div className="relative aspect-[4/3] overflow-hidden rounded-md border border-line bg-paper">
+                        <Image
+                          src={cert.image}
+                          alt={`${cert.name} certificate issued by ${cert.issuer}`}
+                          fill
+                          sizes="260px"
+                          className="object-contain"
+                        />
+                      </div>
                       <div>
                         <h4 className="font-semibold leading-snug text-balance">{cert.name}</h4>
                         <p className="mt-2 text-[0.85rem] text-ink-soft">{cert.issuer}</p>
                       </div>
-                      <div className="flex items-center justify-between gap-3">
+                      <div className="mt-auto flex items-center justify-between gap-3">
                         <span className="font-mono text-[0.8rem] tabular-nums text-ink-soft">
                           {cert.year}
                         </span>
