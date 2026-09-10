@@ -1,3 +1,10 @@
+export type RolePhoto = {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+};
+
 export type Profile = {
   name: string;
   headline: string;
@@ -25,8 +32,7 @@ export type Experience = {
   period: string;
   responsibilities: string[];
   badge: string;
-  photo: string | null;
-  photoAlt: string | null;
+  photos: RolePhoto[];
 };
 
 export type SkillArea = {

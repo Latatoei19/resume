@@ -50,8 +50,7 @@ export const experiences: Experience[] = [
       "Track platform and trend updates across Facebook, Instagram, TikTok, YouTube and Google to keep buying strategy current",
     ],
     badge: "8 outlets · 4 flagship events",
-    photo: null,
-    photoAlt: null,
+    photos: [],
   },
   {
     role: "Marketing Communication Associate",
@@ -64,9 +63,20 @@ export const experiences: Experience[] = [
       "Handle campaign trafficking and deployment across TikTok, YouTube, Pangle, Programmatic and Meta",
     ],
     badge: "6 paid channels · multi-channel ops",
-    photo: "/photos/tiktok-shop-office.jpg",
-    photoAlt:
-      "Sunichaya standing beside the illuminated TikTok logo at the TikTok Shop Thailand office",
+    photos: [
+      {
+        src: "/photos/tiktok-awards-2026.jpg",
+        alt: "Sunichaya and her team on stage at the TikTok Shop Awards 2026 event",
+        width: 1200,
+        height: 900,
+      },
+      {
+        src: "/photos/tiktok-team.jpg",
+        alt: "Sunichaya with the wider marketing team at the TikTok Shop Thailand office",
+        width: 900,
+        height: 1200,
+      },
+    ],
   },
   {
     role: "Performance Marketing Intern",
@@ -79,9 +89,26 @@ export const experiences: Experience[] = [
       "Reviewed influencer profiles and content with agencies and KOLs to maintain brand consistency",
     ],
     badge: "Reported to C-level",
-    photo: "/photos/line-cafe.jpg",
-    photoAlt:
-      "Sunichaya beside a giant Brown character at LINE Cafe inside the LINE Thailand office",
+    photos: [
+      {
+        src: "/photos/line-cafe.jpg",
+        alt: "Sunichaya beside a giant Brown character at LINE Cafe inside the LINE Thailand office",
+        width: 900,
+        height: 1200,
+      },
+      {
+        src: "/photos/line-rookie-team.jpg",
+        alt: "The LINE Rookie cohort gathered in the LINE Thailand office",
+        width: 1200,
+        height: 800,
+      },
+      {
+        src: "/photos/line-rookie-group.jpg",
+        alt: "LINE Rookie interns and staff at the end-of-programme group photo",
+        width: 1200,
+        height: 800,
+      },
+    ],
   },
 ];
 
