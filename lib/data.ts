@@ -1,9 +1,9 @@
 import type {
+  Award,
   Certification,
   Experience,
   PlatformTool,
   Profile,
-  Project,
   SkillGroup,
 } from "@/types";
 
@@ -46,7 +46,7 @@ export const experiences: Experience[] = [
       "Build online advertising strategy and media plans across Meta Ads, TikTok Ads, YouTube Ads and Google Ads — selecting platforms, objectives and flight durations, allocating budget, designing audiences, and forecasting KPI targets for both client and in-house projects",
       "Run media buying end to end against plan: campaign setup, testing, optimization and KPI analysis, monitoring delivery to hit target results",
       "Analyze performance data and build reports to present results and hand work over to stakeholders",
-      "Built six AI agent workflows across Supermetrics, Lark Base, Trello and Google Slides that reconcile campaign data between the ad platforms and the team tracker, forecast media estimates from historical performance, and draft report summaries — cutting a reporting cycle that ran several hours down to under one",
+      "Built six AI agent workflows across Supermetrics, Lark Base, Trello and Google Slides that reconcile campaign data between the ad platforms and the team tracker, forecast media estimates from historical performance, and draft report summaries — reconciling 50–150+ campaigns per event and cutting a reporting cycle that ran several hours down to under one",
       "Own paid media across all eight THE STANDARD outlets — THE STANDARD, THE SECRET SAUCE, THE STANDARD WEALTH, THE STANDARD SPORT, THE STANDARD LIFE, THE STANDARD POP, KND and THE STANDARD PODCAST",
       "Run advertising for flagship events including ALPHA SKILLS SUMMIT, THE SECRET SAUCE Business Weekend Isan, THE SECRET SAUCE Summit 2026 and THE STANDARD ECONOMIC FORUM 2026",
       "Track platform and trend updates across Facebook, Instagram, TikTok, YouTube and Google to keep buying strategy current",
@@ -282,7 +282,7 @@ export const certifications: Certification[] = [
   },
 ];
 
-export const projects: Project[] = [
+export const awards: Award[] = [
   {
     title: "LINE Thailand Business Case Competition",
     tools: "LINE Shopping · Case Strategy · Team Leadership",

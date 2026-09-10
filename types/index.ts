@@ -62,7 +62,7 @@ export type Metric = {
   label: string;
 };
 
-export type Project = {
+export type Award = {
   title: string;
   tools: string;
   objective: string;
