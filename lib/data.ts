@@ -60,10 +60,12 @@ export const experiences: Experience[] = [
     company: "TikTok Shop Thailand (ByteDance)",
     period: "Sep 2025 — Mar 2026",
     responsibilities: [
-      "Manage high-volume campaign operations and asset deployment — hundreds of creatives across multiple campaigns — coordinating internal teams, agencies and vendors for on-time, multi-channel launches",
-      "Built automated Excel dashboards tracking Impressions, Clicks, CPM, CPC, CPPV, CPUV, ROAS and GMV, improving reporting efficiency for stakeholders",
-      "Consolidate upper- and lower-funnel performance data via UTM tracking, delivering insights to Online, Social and Creator Marketing teams",
-      "Handle campaign trafficking and deployment across TikTok, YouTube, Pangle, Programmatic and Meta",
+      "Ran multi-channel campaign operations and asset deployment across TikTok, YouTube, Pangle, Programmatic and Meta — hundreds of creatives, coordinating internal teams, agencies and vendors for on-time launches",
+      "Managed campaign trafficking and tracking-link preparation on structured UTM frameworks, keeping attribution and deep linking accurate",
+      "Built automated Excel dashboards consolidating Impressions, Clicks, CPM, CPC, CPPV, ROAS and GMV, improving reporting efficiency and stakeholder visibility",
+      "Consolidated upper- and lower-funnel data from agencies and internal systems for performance monitoring and campaign reporting",
+      "Ran pre-launch QA on creatives and ad copy against platform specifications and brand guidelines, and reviewed agency deliverables and invoices for accuracy",
+      "Supported on-ground operations for the POC campaign team at TikTok Shop Awards 2026",
     ],
     logo: "tiktok",
     photos: [
@@ -98,10 +100,12 @@ export const experiences: Experience[] = [
     company: "LINE Company Thailand — LINE Rookie",
     period: "May 2025 — Aug 2025",
     responsibilities: [
-      "Implemented and managed media tracking using GA4, GTM, LINE Tags, LINE Custom Conversions and Meta Pixel for accurate attribution",
-      "Designed and maintained Looker Studio dashboards on user behavior and conversion flow, reporting to internal stakeholders and C-level executives",
-      "Executed and optimized paid media on LINE Ads for LINE Health and Greeting Cards",
-      "Reviewed influencer profiles and content with agencies and KOLs to maintain brand consistency",
+      "Executed paid media on LINE Ads for LINE Health and the LINE 14th Anniversary Greeting Card, against awareness and engagement objectives",
+      "Implemented ad tracking for LINE Health and contributed to GTM setup for LINE Family Club, working alongside senior team members and developers to keep measurement and attribution accurate",
+      "Monitored performance in GA4 and prepared structured reports on key metrics, trends and insights for the Business Team",
+      "Built custom Looker Studio dashboards to automate data consolidation and improve reporting visibility",
+      "Analyzed performance data to identify efficiency and conversion improvements",
+      "Coordinated with external agencies across LINE Health, LINE Family Club, LINE Career and LINE Cooperative Program 2025 — reviewing proposals and supporting quotation and PO processes",
     ],
     logo: "line",
     photos: [
