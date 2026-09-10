@@ -8,12 +8,12 @@ import type {
 } from "@/types";
 
 export const profile: Profile = {
-  name: "Sunichaya “Baitoey” Petcharoen",
+  name: "Sunichaya Petcharoen",
   headline: "Performance Marketing & Ads Optimization",
   status: "Open to new opportunities",
   location: "Bangkok, TH",
   intro:
-    "I plan and optimize paid media across Meta, Google and TikTok Ads for THE STANDARD's editorial outlets, flagship events and client projects — from the media plan and KPI forecast through to the reporting that closes the loop.",
+    "I'm Baitoey. I plan and optimize paid media across Meta, Google and TikTok Ads for THE STANDARD's editorial outlets, flagship events and client projects — from the media plan and KPI forecast through to the reporting that closes the loop.",
   summary:
     "I'm an Ads Optimizer at THE STANDARD, owning media planning and paid buying across every outlet in the group, its flagship events and client projects. Before that I ran high-volume campaign operations at TikTok Shop Thailand, and built my analytics and tracking foundations as a Performance Marketing Intern at LINE, reporting straight to C-level stakeholders.",
   strengths: [
