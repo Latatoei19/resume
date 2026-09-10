@@ -47,25 +47,19 @@ export default function Skills() {
           ))}
         </div>
 
-        <div className="mt-9 flex flex-col gap-7">
+        <dl className="mt-9 border-t border-line">
           {skillGroups.map((group) => (
-            <div key={group.title}>
-              <h3 className="mb-3 font-mono text-[0.74rem] uppercase tracking-[0.1em]">
+            <div
+              key={group.title}
+              className="grid grid-cols-1 gap-x-8 gap-y-1.5 border-b border-line py-4 sm:grid-cols-[210px_1fr]"
+            >
+              <dt className="pt-px font-mono text-[0.72rem] uppercase tracking-[0.1em] text-ink-soft">
                 {group.title}
-              </h3>
-              <div className="flex flex-wrap gap-2">
-                {group.items.map((skill) => (
-                  <span
-                    key={skill}
-                    className="rounded-full border border-line bg-surface px-[13px] py-[7px] text-[0.82rem] text-ink-soft"
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
+              </dt>
+              <dd className="text-[0.92rem] leading-relaxed">{group.items.join(" · ")}</dd>
             </div>
           ))}
-        </div>
+        </dl>
 
         <p className="mt-8 text-[0.82rem] text-ink-soft">Languages — {profile.languages}</p>
       </div>
