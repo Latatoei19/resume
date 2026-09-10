@@ -21,7 +21,6 @@ export default function Hero() {
           <Pill href={`mailto:${profile.email}`} solid>
             Email me
           </Pill>
-          <Pill href={`tel:${profile.phone.replace(/-/g, "")}`}>{profile.phone}</Pill>
           {profile.linkedin && (
             <Pill href={profile.linkedin} external>
               LinkedIn ↗

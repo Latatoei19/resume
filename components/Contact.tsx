@@ -18,7 +18,6 @@ export default function Contact() {
             <Pill href={`mailto:${profile.email}`} solid>
               {profile.email}
             </Pill>
-            <Pill href={`tel:${profile.phone.replace(/-/g, "")}`}>{profile.phone}</Pill>
             {profile.linkedin && (
               <Pill href={profile.linkedin} external>
                 LinkedIn ↗

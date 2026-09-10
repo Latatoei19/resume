@@ -14,7 +14,6 @@ export type Profile = {
     note: string;
   };
   email: string;
-  phone: string;
   linkedin: string | null;
   github: string | null;
   languages: string;

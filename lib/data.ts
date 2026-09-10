@@ -30,7 +30,6 @@ export const profile: Profile = {
     note: "GPAX 3.59, Second Class Honors",
   },
   email: "Sunichaya.petch@gmail.com",
-  phone: "065-495-6394",
   linkedin: null,
   github: null,
   languages: "Thai (Native), English (B1)",
