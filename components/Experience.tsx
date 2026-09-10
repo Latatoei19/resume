@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { siLine, siTiktok } from "simple-icons";
 import { experiences } from "@/lib/data";
+import ZoomableImage from "./ZoomableImage";
 
 const brandIcons: Record<string, { path: string; hex: string }> = {
   tiktok: siTiktok,
@@ -54,9 +55,6 @@ export default function Experience() {
                   </li>
                 ))}
               </ul>
-              <span className="mt-3.5 inline-block rounded-md bg-accent-warm-soft px-3 py-[5px] font-mono text-[0.78rem] font-semibold text-accent-warm">
-                {job.badge}
-              </span>
               {job.photos.length > 0 && (
                 <div className="rail mt-5 flex snap-x gap-3 overflow-x-auto pb-2">
                   {job.photos.map((photo) => (
@@ -64,7 +62,7 @@ export default function Experience() {
                       key={photo.src}
                       className="photo-card shrink-0 snap-start overflow-hidden rounded-xl border border-line bg-surface shadow-card"
                     >
-                      <Image
+                      <ZoomableImage
                         src={photo.src}
                         alt={photo.alt}
                         width={photo.width}

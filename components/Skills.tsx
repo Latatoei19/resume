@@ -7,7 +7,7 @@ import {
   siMeta,
   siTiktok,
 } from "simple-icons";
-import { platformTools, profile, skills } from "@/lib/data";
+import { platformTools, profile, skillGroups } from "@/lib/data";
 
 const brandIcons: Record<string, { path: string; hex: string }> = {
   meta: siMeta,
@@ -47,14 +47,23 @@ export default function Skills() {
           ))}
         </div>
 
-        <div className="mt-6 flex flex-wrap gap-2">
-          {skills.map((skill) => (
-            <span
-              key={skill}
-              className="rounded-full border border-line bg-surface px-[13px] py-[7px] text-[0.82rem] text-ink-soft"
-            >
-              {skill}
-            </span>
+        <div className="mt-9 flex flex-col gap-7">
+          {skillGroups.map((group) => (
+            <div key={group.title}>
+              <h3 className="mb-3 font-mono text-[0.74rem] uppercase tracking-[0.1em]">
+                {group.title}
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {group.items.map((skill) => (
+                  <span
+                    key={skill}
+                    className="rounded-full border border-line bg-surface px-[13px] py-[7px] text-[0.82rem] text-ink-soft"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
           ))}
         </div>
 

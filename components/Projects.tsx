@@ -1,5 +1,5 @@
-import Image from "next/image";
 import { projects } from "@/lib/data";
+import ZoomableImage from "./ZoomableImage";
 
 export default function Projects() {
   return (
@@ -48,13 +48,14 @@ export default function Projects() {
                 ))}
               </dl>
               {project.image && (
-                <div className="relative aspect-[4/3] overflow-hidden rounded-md border border-line bg-paper">
-                  <Image
+                <div className="flex aspect-[4/3] items-center justify-center overflow-hidden rounded-md border border-line bg-paper">
+                  <ZoomableImage
                     src={project.image}
                     alt={project.imageAlt ?? ""}
-                    fill
+                    width={project.imageWidth ?? 1000}
+                    height={project.imageHeight ?? 750}
                     sizes="270px"
-                    className="object-contain"
+                    className="max-h-full w-auto object-contain"
                   />
                 </div>
               )}

@@ -1,5 +1,5 @@
-import Image from "next/image";
 import { certifications } from "@/lib/data";
+import ZoomableImage from "./ZoomableImage";
 
 export default function Certifications() {
   const categories = [...new Set(certifications.map((cert) => cert.category))];
@@ -24,13 +24,14 @@ export default function Certifications() {
                       key={cert.name}
                       className="flex w-[300px] shrink-0 snap-start flex-col gap-4 rounded-xl border border-line bg-surface p-5 shadow-card"
                     >
-                      <div className="relative aspect-[4/3] overflow-hidden rounded-md border border-line bg-paper">
-                        <Image
+                      <div className="flex aspect-[4/3] items-center justify-center overflow-hidden rounded-md border border-line bg-paper">
+                        <ZoomableImage
                           src={cert.image}
                           alt={`${cert.name} certificate issued by ${cert.issuer}`}
-                          fill
+                          width={cert.imageWidth}
+                          height={cert.imageHeight}
                           sizes="260px"
-                          className="object-contain"
+                          className="max-h-full w-auto object-contain"
                         />
                       </div>
                       <div>

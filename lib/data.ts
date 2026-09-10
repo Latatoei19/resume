@@ -4,6 +4,7 @@ import type {
   PlatformTool,
   Profile,
   Project,
+  SkillGroup,
 } from "@/types";
 
 export const profile: Profile = {
@@ -49,7 +50,6 @@ export const experiences: Experience[] = [
       "Run advertising for flagship events including ALPHA SKILLS SUMMIT, THE SECRET SAUCE Business Weekend Isan, THE SECRET SAUCE Summit 2026 and THE STANDARD ECONOMIC FORUM 2026",
       "Track platform and trend updates across Facebook, Instagram, TikTok, YouTube and Google to keep buying strategy current",
     ],
-    badge: "8 outlets · 4 flagship events",
     logo: "/logos/the-standard.png",
     photos: [],
   },
@@ -63,7 +63,6 @@ export const experiences: Experience[] = [
       "Consolidate upper- and lower-funnel performance data via UTM tracking, delivering insights to Online, Social and Creator Marketing teams",
       "Handle campaign trafficking and deployment across TikTok, YouTube, Pangle, Programmatic and Meta",
     ],
-    badge: "6 paid channels · multi-channel ops",
     logo: "tiktok",
     photos: [
       {
@@ -102,7 +101,6 @@ export const experiences: Experience[] = [
       "Executed and optimized paid media on LINE Ads for LINE Health and Greeting Cards",
       "Reviewed influencer profiles and content with agencies and KOLs to maintain brand consistency",
     ],
-    badge: "Reported to C-level",
     logo: "line",
     photos: [
       {
@@ -143,36 +141,56 @@ export const platformTools: PlatformTool[] = [
   { name: "Google Looker Studio", icon: "looker" },
 ];
 
-export const skills: string[] = [
-  "Google Performance Max",
-  "TikTok GMV Max",
-  "Meta Business Suite",
-  "Google Ads Editor",
-  "Search Engine Marketing (SEM)",
-  "Media Planning",
-  "Media Optimization",
-  "Media Tracking",
-  "Performance Reporting",
-  "Automation Dashboard",
-  "N8N Workflow Automation",
-  "YouTube Analytics",
-  "Data Analysis",
-  "Consumer Insight",
-  "Research Skills",
-  "Marketing Research",
-  "Marketing Strategy",
-  "Marketing Plan",
-  "Digital Marketing",
-  "Online Marketing",
-  "Multimedia Marketing Campaigns",
-  "KOL Management",
-  "Social Listening",
-  "Account Management",
-  "Messaging API",
-  "Basic HTML",
-  "Basic JavaScript",
-  "Google Workspace",
-  "Microsoft Office",
+export const skillGroups: SkillGroup[] = [
+  {
+    title: "Paid Media & Buying",
+    items: [
+      "Google Performance Max",
+      "TikTok GMV Max",
+      "Meta Business Suite",
+      "Google Ads Editor",
+      "Search Engine Marketing (SEM)",
+      "Media Planning",
+      "Media Optimization",
+    ],
+  },
+  {
+    title: "Measurement & Reporting",
+    items: [
+      "Media Tracking",
+      "Performance Reporting",
+      "YouTube Analytics",
+      "Data Analysis",
+      "Automation Dashboard",
+      "N8N Workflow Automation",
+    ],
+  },
+  {
+    title: "Strategy & Research",
+    items: [
+      "Marketing Strategy",
+      "Marketing Plan",
+      "Marketing Research",
+      "Consumer Insight",
+      "Research Skills",
+      "Digital Marketing",
+      "Online Marketing",
+      "Multimedia Marketing Campaigns",
+    ],
+  },
+  {
+    title: "Collaboration & Tools",
+    items: [
+      "KOL Management",
+      "Social Listening",
+      "Account Management",
+      "Messaging API",
+      "Basic HTML",
+      "Basic JavaScript",
+      "Google Workspace",
+      "Microsoft Office",
+    ],
+  },
 ];
 
 export const certifications: Certification[] = [
@@ -182,6 +200,8 @@ export const certifications: Certification[] = [
     year: "2023",
     category: "Digital Marketing",
     image: "/certificates/foundations-digital-marketing.jpg",
+    imageWidth: 1000,
+    imageHeight: 772,
   },
   {
     name: "Attract and Engage Customers with Digital Marketing",
@@ -189,6 +209,8 @@ export const certifications: Certification[] = [
     year: "2023",
     category: "Digital Marketing",
     image: "/certificates/attract-engage-customers.jpg",
+    imageWidth: 1000,
+    imageHeight: 772,
   },
   {
     name: "From Likes to Leads: Interact with Customers Online",
@@ -196,6 +218,8 @@ export const certifications: Certification[] = [
     year: "2023",
     category: "Digital Marketing",
     image: "/certificates/likes-to-leads.jpg",
+    imageWidth: 1000,
+    imageHeight: 772,
   },
   {
     name: "Effective Data Storytelling",
@@ -203,6 +227,8 @@ export const certifications: Certification[] = [
     year: "2025",
     category: "Marketing Strategy & Data",
     image: "/certificates/effective-data-storytelling.jpg",
+    imageWidth: 1000,
+    imageHeight: 744,
   },
   {
     name: "Marketing Trainee 37th",
@@ -210,6 +236,8 @@ export const certifications: Certification[] = [
     year: "2024",
     category: "Marketing Strategy & Data",
     image: "/certificates/marketing-trainee-37.jpg",
+    imageWidth: 1000,
+    imageHeight: 794,
   },
   {
     name: "NFT: A New Approach to Marketing Strategy",
@@ -217,6 +245,8 @@ export const certifications: Certification[] = [
     year: "2023",
     category: "Marketing Strategy & Data",
     image: "/certificates/nft-marketing-strategy.jpg",
+    imageWidth: 1000,
+    imageHeight: 705,
   },
   {
     name: "Demographic Disruption and Business",
@@ -224,6 +254,8 @@ export const certifications: Certification[] = [
     year: "2022",
     category: "Business Foundations",
     image: "/certificates/demographic-disruption.jpg",
+    imageWidth: 1000,
+    imageHeight: 701,
   },
   {
     name: "Critical Thinking for Business",
@@ -231,6 +263,8 @@ export const certifications: Certification[] = [
     year: "2022",
     category: "Business Foundations",
     image: "/certificates/critical-thinking-business.jpg",
+    imageWidth: 1000,
+    imageHeight: 701,
   },
 ];
 
@@ -247,6 +281,8 @@ export const projects: Project[] = [
       { value: "LINE Rookie", label: "Program" },
     ],
     image: "/projects/line-award.jpg",
+    imageWidth: 1100,
+    imageHeight: 733,
     imageAlt:
       "Sunichaya and her team holding their prizes at the LINE Rookie award presentation",
   },
@@ -262,6 +298,8 @@ export const projects: Project[] = [
       { value: "H.M.", label: "Honorable Mention" },
     ],
     image: "/projects/jmat-award.jpg",
+    imageWidth: 1000,
+    imageHeight: 793,
     imageAlt: "Certificate for the J-MAT Award 33rd competition",
   },
   {
@@ -276,6 +314,8 @@ export const projects: Project[] = [
       { value: "H.M.", label: "Honorable Mention" },
     ],
     image: "/projects/true-award.jpg",
+    imageWidth: 1000,
+    imageHeight: 707,
     imageAlt: "Honorable mention certificate from the TRUE Dummy Company Program",
   },
 ];

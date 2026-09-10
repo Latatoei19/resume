@@ -1,3 +1,8 @@
+export type SkillGroup = {
+  title: string;
+  items: string[];
+};
+
 export type RolePhoto = {
   src: string;
   alt: string;
@@ -32,7 +37,6 @@ export type Experience = {
   company: string;
   period: string;
   responsibilities: string[];
-  badge: string;
   // A simple-icons slug, or a path under /logos for brands the library lacks.
   logo: string;
   photos: RolePhoto[];
@@ -49,6 +53,8 @@ export type Certification = {
   year: string;
   category: string;
   image: string;
+  imageWidth: number;
+  imageHeight: number;
 };
 
 export type Metric = {
@@ -64,4 +70,6 @@ export type Project = {
   metrics: Metric[];
   image: string | null;
   imageAlt: string | null;
+  imageWidth: number | null;
+  imageHeight: number | null;
 };

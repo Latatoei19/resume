@@ -51,6 +51,24 @@ body {
   color: var(--ink);
 }
 
+/* An explicit width keeps the dialog from shrink-to-fitting around the image,
+   which left it far smaller than the space available. */
+.lightbox {
+  margin: auto;
+  width: min(92vw, 1040px);
+  max-height: 90vh;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--surface);
+  color: var(--ink);
+}
+
+.lightbox::backdrop {
+  background: rgba(20, 14, 30, 0.72);
+  backdrop-filter: blur(3px);
+}
+
 .rail {
   scrollbar-width: thin;
   scrollbar-color: var(--line) transparent;
