@@ -8,7 +8,7 @@ export default function About() {
     <section id="about" className="border-b border-line py-[76px]">
       <div className="mx-auto grid w-full max-w-[920px] grid-cols-1 gap-8 px-7 md:grid-cols-[0.85fr_1.4fr] md:gap-12">
         <div>
-          <p className="mb-3.5 font-mono text-[0.72rem] uppercase tracking-[0.12em] text-accent">
+          <p className="mb-3.5 font-mono text-[0.8rem] uppercase tracking-[0.12em] text-accent">
             About
           </p>
           <h2 className="font-serif text-[clamp(1.6rem,3vw,2rem)] leading-tight text-balance">

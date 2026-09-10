@@ -28,7 +28,7 @@ export default function Experience() {
   return (
     <section id="experience" className="border-b border-line py-[76px]">
       <div className="mx-auto w-full max-w-[920px] px-7">
-        <p className="mb-3.5 font-mono text-[0.72rem] uppercase tracking-[0.12em] text-accent">
+        <p className="mb-3.5 font-mono text-[0.8rem] uppercase tracking-[0.12em] text-accent">
           Work Experience
         </p>
         <div className="mt-9 flex flex-col gap-11 border-l-2 border-line pl-[26px]">

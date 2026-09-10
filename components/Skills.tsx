@@ -23,11 +23,11 @@ export default function Skills() {
   return (
     <section id="skills" className="border-b border-line py-[76px]">
       <div className="mx-auto w-full max-w-[920px] px-7">
-        <p className="mb-3.5 font-mono text-[0.72rem] uppercase tracking-[0.12em] text-accent">
+        <p className="mb-3.5 font-mono text-[0.8rem] uppercase tracking-[0.12em] text-accent">
           Skills
         </p>
 
-        <h3 className="mb-4 font-mono text-[0.74rem] uppercase tracking-[0.1em]">Platforms</h3>
+        <h3 className="mb-4 font-mono text-[0.88rem] uppercase tracking-[0.1em]">Platforms</h3>
         <div className="grid grid-cols-[repeat(auto-fill,minmax(190px,1fr))] gap-3">
           {platformTools.map((tool) => (
             <div
@@ -53,7 +53,7 @@ export default function Skills() {
               key={group.title}
               className="grid grid-cols-1 gap-x-8 gap-y-1.5 border-b border-line py-4 sm:grid-cols-[210px_1fr]"
             >
-              <dt className="pt-px font-mono text-[0.72rem] uppercase tracking-[0.1em] text-ink-soft">
+              <dt className="font-mono text-[0.88rem] uppercase tracking-[0.1em] text-ink">
                 {group.title}
               </dt>
               <dd className="text-[0.92rem] leading-relaxed">{group.items.join(" · ")}</dd>

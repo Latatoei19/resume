@@ -5,7 +5,7 @@ export default function Awards() {
   return (
     <section id="honors" className="border-b border-line py-[76px]">
       <div className="mx-auto w-full max-w-[920px] px-7">
-        <p className="mb-3.5 font-mono text-[0.72rem] uppercase tracking-[0.12em] text-accent">
+        <p className="mb-3.5 font-mono text-[0.8rem] uppercase tracking-[0.12em] text-accent">
           Honors & Awards
         </p>
         <div className="mt-8 grid grid-cols-[repeat(auto-fit,minmax(270px,1fr))] gap-6">

@@ -7,13 +7,13 @@ export default function Certifications() {
   return (
     <section id="certifications" className="border-b border-line py-[76px]">
       <div className="mx-auto w-full max-w-[920px] px-7">
-        <p className="mb-3.5 font-mono text-[0.72rem] uppercase tracking-[0.12em] text-accent">
+        <p className="mb-3.5 font-mono text-[0.8rem] uppercase tracking-[0.12em] text-accent">
           Certifications
         </p>
         <div className="mt-8 flex flex-col gap-10">
           {categories.map((category) => (
             <div key={category}>
-              <h3 className="mb-4 font-mono text-[0.74rem] uppercase tracking-[0.1em]">
+              <h3 className="mb-4 font-mono text-[0.88rem] uppercase tracking-[0.1em]">
                 {category}
               </h3>
               <div className="rail -mx-7 flex snap-x snap-mandatory gap-4 overflow-x-auto px-7 pb-3">
@@ -22,7 +22,7 @@ export default function Certifications() {
                   .map((cert) => (
                     <article
                       key={cert.name}
-                      className="flex w-[300px] shrink-0 snap-start flex-col gap-4 rounded-xl border border-line bg-surface p-5 shadow-card"
+                      className="flex w-[330px] shrink-0 snap-start flex-col gap-4 rounded-xl border border-line bg-surface p-5 shadow-card"
                     >
                       <div className="flex aspect-[4/3] items-center justify-center overflow-hidden rounded-md border border-line bg-paper">
                         <ZoomableImage
@@ -30,15 +30,15 @@ export default function Certifications() {
                           alt={`${cert.name} certificate issued by ${cert.issuer}`}
                           width={cert.imageWidth}
                           height={cert.imageHeight}
-                          sizes="260px"
+                          sizes="290px"
                           className="max-h-full w-auto object-contain"
                         />
                       </div>
                       <div>
-                        <h4 className="font-semibold leading-snug text-balance">{cert.name}</h4>
-                        <p className="mt-2 text-[0.85rem] text-ink-soft">{cert.issuer}</p>
+                        <h4 className="text-[1.05rem] font-semibold leading-snug text-balance">{cert.name}</h4>
+                        <p className="mt-2 text-[0.9rem] text-ink-soft">{cert.issuer}</p>
                       </div>
-                      <span className="mt-auto font-mono text-[0.8rem] tabular-nums text-ink-soft">
+                      <span className="mt-auto font-mono text-[0.88rem] tabular-nums text-ink-soft">
                         {cert.year}
                       </span>
                     </article>
