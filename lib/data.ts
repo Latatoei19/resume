@@ -108,6 +108,12 @@ export const experiences: Experience[] = [
         width: 1200,
         height: 800,
       },
+      {
+        src: "/photos/line-cafe-team.jpg",
+        alt: "Sunichaya and colleagues beside the giant Brown character at LINE Cafe",
+        width: 1300,
+        height: 1074,
+      },
     ],
   },
 ];

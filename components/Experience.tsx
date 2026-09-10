@@ -33,11 +33,11 @@ export default function Experience() {
                 {job.badge}
               </span>
               {job.photos.length > 0 && (
-                <div className="mt-5 flex flex-wrap gap-3">
+                <div className="rail mt-5 flex snap-x gap-3 overflow-x-auto pb-2">
                   {job.photos.map((photo) => (
                     <figure
                       key={photo.src}
-                      className="photo-card overflow-hidden rounded-xl border border-line bg-surface shadow-card"
+                      className="photo-card shrink-0 snap-start overflow-hidden rounded-xl border border-line bg-surface shadow-card"
                     >
                       <Image
                         src={photo.src}
