@@ -1,26 +1,61 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --paper: #f8f5fc;
+  --surface: #ffffff;
+  --ink: #2b2140;
+  --ink-soft: #71638c;
+  --line: #e4dcf2;
+  --accent: #8c6fc7;
+  --accent-soft: #eee7f9;
+  --accent-warm: #c97fa0;
+  --accent-warm-soft: #f9e4ec;
+  --shadow-card: 0 1px 2px rgba(43, 33, 64, 0.05), 0 10px 28px rgba(43, 33, 64, 0.08);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --paper: #17121f;
+    --surface: #211a2e;
+    --ink: #efe9f8;
+    --ink-soft: #ac9cc7;
+    --line: #332a46;
+    --accent: #b79ef0;
+    --accent-soft: #2b2140;
+    --accent-warm: #e8a8c2;
+    --accent-warm-soft: #3b2432;
+    --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.35), 0 10px 28px rgba(0, 0, 0, 0.4);
   }
 }
 
+@theme inline {
+  --color-paper: var(--paper);
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-warm: var(--accent-warm);
+  --color-accent-warm-soft: var(--accent-warm-soft);
+
+  --font-serif: var(--font-instrument-serif), "Iowan Old Style", Palatino, serif;
+  --font-sans: var(--font-public-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, Consolas, monospace;
+
+  --shadow-card: var(--shadow-card);
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
 }
