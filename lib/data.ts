@@ -138,10 +138,10 @@ export const experiences: Experience[] = [
 ];
 
 export const platformTools: PlatformTool[] = [
-  { name: "Meta Ads", icon: "meta" },
+  { name: "Meta Ads Manager", icon: "meta" },
   { name: "Google Ads", icon: "googleads" },
-  { name: "TikTok Ad Manager", icon: "tiktok" },
-  { name: "LINE Ads", icon: "line" },
+  { name: "TikTok Ads Manager", icon: "tiktok" },
+  { name: "LINE Ads Platform", icon: "line" },
   { name: "Google Analytics", icon: "googleanalytics" },
   { name: "Google Tag Manager", icon: "googletagmanager" },
   { name: "Google Looker Studio", icon: "looker" },
