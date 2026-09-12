@@ -129,7 +129,7 @@ export const experiences: Experience[] = [
       },
       {
         src: "/photos/line-cafe-team.jpg",
-        alt: "Sunichaya and colleagues beside the giant Brown character at LINE Cafe",
+        alt: "Sunichaya with her mentor and colleagues beside the giant Brown character at LINE Cafe",
         width: 1300,
         height: 1074,
       },
