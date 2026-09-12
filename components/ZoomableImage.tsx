@@ -40,13 +40,16 @@ export default function ZoomableImage({
         data-track-image={src}
         className="block cursor-zoom-in focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
       >
+        {/* pointer-events-none: keeps the browser's click target on the
+            button (and its data-track-image attribute) instead of this img,
+            which GTM's click variables read from directly with no bubbling. */}
         <Image
           src={src}
           alt={alt}
           width={width}
           height={height}
           sizes={sizes}
-          className={className}
+          className={`${className} pointer-events-none`}
         />
       </button>
       <dialog
